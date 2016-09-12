@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+- node
+branches:
+  only:
+  - dev
+cache:
+  directories:
+  - node_modules
+env:
+  global:
+    secure: rklZyw967uwQCfIiz6A89QPbSrxXEmN1Jh8yojA+DiH7oWAQ1BnUxBYZ4eZw4h7kKJJRP2XVGs39/1O6D1GQUXfxhU11sYTDtdo8tRWvZEUfQhq4dV9KnsErdCMm8O878vyG2ClCYRfV74pPmCjVfpYSVOCGhW/N0etFLDHnAF5EHXoVaonsC8+bGsmf7cvyOmlhS/2MftzCW3YKNVtgaU9TJWLqC33jQTIAbGChxiteBA8FcGYUOHI8DyrULND7+hr2q0d/jzrHcYE+k3wFlnExugZa0lGrtRE0H+8vBikxzOkJBb6n9uDP58V8TR52UCOlASRKI6OZUe1+yZ0ucgVLd1HonhOPJ/SgeN+qDq+mwRitFhWG+eBYDDQP6xB/hLRwr+4IbeUUamJkdolTEaLnkNBUUbO/eY0Mf9OGLoEU2G6VIqJ+eCCcEGTRPBtrzNFDUMR6QdMgTJfshz6krv1oBjYWqvQsF8KiByaU8jNH1LKkRYQfSzETPwq/rarJYbH+PoF1I3M+QXtklDApHi9UBYT0NuTtvEjnONluAeT5hbq+DLLa+JdUzq5xrSvhycAIJfII8ANs2GvGX73toHieeVrLfzsrOjU5nEaWgyM+qg/sUl9eXB/QUHJvQipzZ0OQLGIcBBzsopp1G/AKismdG54VHuM8dmQ5rsv5UMc=
+before_install:
+#- openssl aes-256-cbc -K $encrypted_9a7b8d71fe50_key -iv $encrypted_9a7b8d71fe50_iv
+#  -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+#- chmod 600 ~/.ssh/id_rsa
+#- eval $(ssh-agent)
+#- ssh-add ~/.ssh/id_rsa
+#- cp .travis/ssh_config ~/.ssh/config
+# github仓库操作
+- sed -i'' "s~git@github.com:Mybrc91/mybrc91.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/Mybrc91/mybrc91.github.io.git~" _config.yml
+- git config --global user.name "cheng"
+- git config --global user.email gdzrch@163.com
+install:
+- npm install hexo-deployer-git --save
+- npm install
+script:
+- hexo clean && hexo g -d
