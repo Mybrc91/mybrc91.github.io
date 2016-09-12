@@ -9,16 +9,10 @@ cache:
   - node_modules
 env:
   global:
-    secure: rklZyw967uwQCfIiz6A89QPbSrxXEmN1Jh8yojA+DiH7oWAQ1BnUxBYZ4eZw4h7kKJJRP2XVGs39/1O6D1GQUXfxhU11sYTDtdo8tRWvZEUfQhq4dV9KnsErdCMm8O878vyG2ClCYRfV74pPmCjVfpYSVOCGhW/N0etFLDHnAF5EHXoVaonsC8+bGsmf7cvyOmlhS/2MftzCW3YKNVtgaU9TJWLqC33jQTIAbGChxiteBA8FcGYUOHI8DyrULND7+hr2q0d/jzrHcYE+k3wFlnExugZa0lGrtRE0H+8vBikxzOkJBb6n9uDP58V8TR52UCOlASRKI6OZUe1+yZ0ucgVLd1HonhOPJ/SgeN+qDq+mwRitFhWG+eBYDDQP6xB/hLRwr+4IbeUUamJkdolTEaLnkNBUUbO/eY0Mf9OGLoEU2G6VIqJ+eCCcEGTRPBtrzNFDUMR6QdMgTJfshz6krv1oBjYWqvQsF8KiByaU8jNH1LKkRYQfSzETPwq/rarJYbH+PoF1I3M+QXtklDApHi9UBYT0NuTtvEjnONluAeT5hbq+DLLa+JdUzq5xrSvhycAIJfII8ANs2GvGX73toHieeVrLfzsrOjU5nEaWgyM+qg/sUl9eXB/QUHJvQipzZ0OQLGIcBBzsopp1G/AKismdG54VHuM8dmQ5rsv5UMc=
+  - secure: Gxq9T7vN/WV8TwLfj1fFmMNd7WwcBRLJ+59v2A4BFbMN2ELKXMErSPQ29PVrUi4Kfrbe4vAoluV/PqfP+ACLKXQ85Rx9zVHLVzzE5wTnPGbzWki0L6nJTuX5mf3nSWUibhL3hB394MXDtNHzOXYHIZxRzhLi+Rp4gXiQ9yMeZ2PbXz/J9dRi725b5n23LSLlMuMq9defU4ChVMOTL1p/feqKBd25gYpTyIfNxJl9oCis2wMsJEx/NG82z1Axd+ohk8eRSqMxrUY7l46NuEjtgo2B04c488uuY4/JpHdkJtXA2ysdmMQr3zP/efH2RU0cV/hvbx+Wmu3iKh0ev1K9CSfMU8FkGHuLvNZ9sjkP3foV4WlhejcUBySn0ysUgab9XOZ8ZA4vyB6CbvabewrrZz4nYKhoWFXvpq9NVM/4PoB24UUgXhY68/UYsSysBdSEqzgdn8PQkQYb//Ahh9/IU7yUnf44tGzSDYa9rwDoJ4hPWjWkgNZ2WqoJSU9sLkdA4EIRNvOivm06dsf+bQ2DcRDKQs1tit2qX8HOL0oWa9xoJozXuC985js74Frf6Tih3qCzu19ScX5LlUOCNHK/USNccfp+djfWt98u+g0L+LM/ahStEH7yE2/Iw9NvMlrXdr578dU7c05XH5UZY5LUTdNgX2L9XUKlNJ//klbybHk=
 before_install:
-#- openssl aes-256-cbc -K $encrypted_9a7b8d71fe50_key -iv $encrypted_9a7b8d71fe50_iv
-#  -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
-#- chmod 600 ~/.ssh/id_rsa
-#- eval $(ssh-agent)
-#- ssh-add ~/.ssh/id_rsa
-#- cp .travis/ssh_config ~/.ssh/config
-# github仓库操作
-- sed -i'' "s~git@github.com:Mybrc91/mybrc91.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/Mybrc91/mybrc91.github.io.git~" _config.yml
+- sed -i'' "s~git@github.com:Mybrc91/mybrc91.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/Mybrc91/mybrc91.github.io.git~"
+  _config.yml
 - git config --global user.name "cheng"
 - git config --global user.email gdzrch@163.com
 install:
@@ -26,4 +20,3 @@ install:
 - npm install
 script:
 - hexo clean && hexo g -d
-
