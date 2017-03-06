@@ -3,14 +3,39 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Cheng's Blog
+title: 功到自然成
 subtitle:
-description: 程的博客
+description: gdzrch的blog
 author: gdzrch
-language: 
-- zh-CN
-- en
+language: zh-CN
 timezone: Asia/Shanghai
+
+#flowchart 插件，显示流程图 https://www.npmjs.com/package/hexo-filter-flowchart
+flowchart:
+  raphael: 'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js'
+  flowchart: 'https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js'
+  options": # options used for `drawSVG`
+    scale: 1
+    line-width: 2,
+    line-length: 50,
+    text-margin: 10,
+    font-size: 12
+#sequence 插件，显示时序图 https://github.com/bubkoo/hexo-filter-sequence
+sequence:
+  webfont: 'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js'
+  snap: 'https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js'
+  underscore: 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'
+  sequence: 'https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js'
+  options:
+    theme: 'simple'
+    css_class:
+
+#代码高亮插件
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'default'
+  line_number: true    # default false
+
 
 #MathJax 
 math:
@@ -29,7 +54,7 @@ math:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: mybrc91.github.io
 root: /
-permalink: :year/:month/:day/:title/
+permalink: post/:title.html
 permalink_defaults:
 
 # Directory
@@ -40,7 +65,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: ['README.md','code**.html']
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -53,7 +78,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace:
@@ -78,7 +103,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hexo-theme-material
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
