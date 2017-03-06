@@ -3,16 +3,31 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Cheng's Blog
 subtitle:
-description:
-author: John Doe
-language:
-timezone:
+description: 程的博客
+author: gdzrch
+language: 
+- zh-CN
+- en
+timezone: Asia/Shanghai
+
+#MathJax 
+math:
+  engine: 'mathjax' # or 'katex'
+  #mathjax:
+    #src: custom_mathjax_source
+   # config:
+      # MathJax config
+  #katex:
+   # css: custom_css_source
+   # js: custom_js_source # not used
+   # config:
+      # KaTeX config
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: mybrc91.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
