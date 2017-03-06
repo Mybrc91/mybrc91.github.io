@@ -1,0 +1,3 @@
+[submodule "themes/hexo-theme-material"]
+	path = themes/hexo-theme-material
+	url = git@github.com:Mybrc91/hexo-theme-material.git
