@@ -20,4 +20,5 @@ install:
 - npm install hexo-deployer-git --save
 - npm install
 script:
+- cd themes && git clone git@github.com:Mybrc91/hexo-theme-material.git
 - hexo clean && hexo g -d
