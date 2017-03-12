@@ -43,10 +43,10 @@ categories:
 
 ### URL
 
-！+（url地址）  插入图片
+!+[图片名称]+\(url地址\)  插入图片
 ![图片](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png)
 
-（url地址）[ 链接名称 ] 插入链接
+\[链接名称\]+\(url地址\) 插入链接
 [Google](https://www.google.com)
 
 ### 字体
@@ -85,7 +85,7 @@ categories:
 
 `[toc]` 生成目录 标题的目录
 
-使用3个" ` "+“语言名称” + 3个“ ` ”  加强代码块
+使用3个\`(反引号)+ “语言名称” + 3个\`（反引号）  加强代码块
 
 ```java
 final public FragmentManager getChildFragmentManager() {
