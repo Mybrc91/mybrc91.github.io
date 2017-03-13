@@ -52,7 +52,7 @@ public class CameraView extends TextureView implements TextureView.SurfaceTextur
 		setCameraParameter();
 		mCamera.addCallbackBuffer(new byte[mPreviewWidth * mPreviewHeight * 3 / 2]);
 		mCamera.setPreviewCallbackWithBuffer(mCameraPreviewCallback);
-
+        mCamera.setPreviewTexture(surface);
 		mCamera.startPreview();
 	}
 
