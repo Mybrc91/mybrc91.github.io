@@ -1,6 +1,6 @@
 ---
 title: Waiting on multiple threads to complete in Java
-date: 2017-03-22 21:46:04
+date: 2017-03-21 21:46:04
 tags:
  - Java
  - Thread
