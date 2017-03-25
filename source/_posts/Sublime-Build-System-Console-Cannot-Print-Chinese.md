@@ -10,6 +10,8 @@ categories:
 
 Windows系统下Sublime中通过自带的build系统运行Java文件无法输出中文的日志信息。
 
+# 控制台无法输出中文错误信息
+
 在[Sublime文档](http://docs.sublimetext.info/en/latest/reference/build_systems/exec.html)中看到如下语句：
 > `encoding`
 Optional.
@@ -106,3 +108,25 @@ sun.cpu.isalist=amd64
 所以导致输出中文信息无法查看，解决方法如下
 
 在JavaC.sublime-build文件中加上`"encoding":"ms936"`。
+
+# 代码中无法打印汉字
+
+同时在使用的过程中又发现了另一个问题,运行如下代码，在控制台打印出了乱码：
+```java
+System.out.println("中文");
+
+```
+分析了一下原因：
+1. Sublime中文件默认编码格式是`UTF-8`
+2. `javac`命令执行时如果不加参数，默认使用系统的编码格式编译
+
+编译时无法识别正确的编码，所以运行时编码有问题。
+
+## 解决办法
+
+运行带参数的命令`javac -encoding utf-8`
+
+# 注意
+
+尽量使用`UTF-8`编码保存java文件。
+
