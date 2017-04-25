@@ -51,7 +51,7 @@ RUN sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules && \
 `RUN sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules`替换submodule中的ssh url为https url方式获取git库
 `RUN git checkout .gitmodules` 替换后再还原gitmodules文件
 6. 更新git库，并启动hexo server
-`CMD git pull & hexo c & hexo g & hexo s | wc -`
+`CMD git pull & hexo clean & hexo g & hexo s`
 
 ## 创建docker镜像
 
