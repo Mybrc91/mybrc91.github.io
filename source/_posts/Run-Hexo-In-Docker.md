@@ -76,4 +76,11 @@ run默认会运行Dockerfile文件中的`CMD`命令，所以hexo server会启动
 
 运行`docker container --help`查看一系列的container管理命令
 
+### 更新docker镜像
+
+因为container关闭后的状态是无法保存的，如果需要把当前容器的状态更新到docker镜像中，可以使用以下方式：
+
+`docker commit container-id image-name:tag`
+
+在container没有关闭的前提下，把状态保存到镜像中。
 
