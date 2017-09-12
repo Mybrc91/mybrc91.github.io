@@ -4,9 +4,9 @@ node_js:
 branches:
   only:
   - dev
-cache:
-  directories:
-  - node_modules
+#cache:
+#  directories:
+#  - node_modules
 # Handle git submodules yourself
 git:
   submodules: false
