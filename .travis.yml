@@ -4,15 +4,15 @@ node_js:
 branches:
   only:
   - dev
-#cache:
-#  directories:
-#  - node_modules
+cache:
+  directories:
+  - node_modules
 # Handle git submodules yourself
 git:
   submodules: false
 env:
   global:
-  - secure: Gxq9T7vN/WV8TwLfj1fFmMNd7WwcBRLJ+59v2A4BFbMN2ELKXMErSPQ29PVrUi4Kfrbe4vAoluV/PqfP+ACLKXQ85Rx9zVHLVzzE5wTnPGbzWki0L6nJTuX5mf3nSWUibhL3hB394MXDtNHzOXYHIZxRzhLi+Rp4gXiQ9yMeZ2PbXz/J9dRi725b5n23LSLlMuMq9defU4ChVMOTL1p/feqKBd25gYpTyIfNxJl9oCis2wMsJEx/NG82z1Axd+ohk8eRSqMxrUY7l46NuEjtgo2B04c488uuY4/JpHdkJtXA2ysdmMQr3zP/efH2RU0cV/hvbx+Wmu3iKh0ev1K9CSfMU8FkGHuLvNZ9sjkP3foV4WlhejcUBySn0ysUgab9XOZ8ZA4vyB6CbvabewrrZz4nYKhoWFXvpq9NVM/4PoB24UUgXhY68/UYsSysBdSEqzgdn8PQkQYb//Ahh9/IU7yUnf44tGzSDYa9rwDoJ4hPWjWkgNZ2WqoJSU9sLkdA4EIRNvOivm06dsf+bQ2DcRDKQs1tit2qX8HOL0oWa9xoJozXuC985js74Frf6Tih3qCzu19ScX5LlUOCNHK/USNccfp+djfWt98u+g0L+LM/ahStEH7yE2/Iw9NvMlrXdr578dU7c05XH5UZY5LUTdNgX2L9XUKlNJ//klbybHk=
+  - secure: 522fc4b0cea0a071516e66948f4087d528b04f74
 before_install:
 - export TZ='Asia/Shanghai'  # 设置时区
 - sed -i'' "s~git@github.com:Mybrc91/mybrc91.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/Mybrc91/mybrc91.github.io.git~"
