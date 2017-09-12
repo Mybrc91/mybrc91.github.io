@@ -10,9 +10,9 @@ cache:
 # Handle git submodules yourself
 git:
   submodules: false
-env:
-  global:
-  - secure: 522fc4b0cea0a071516e66948f4087d528b04f74
+#env:
+#  global:
+#  - secure: xxx
 before_install:
 - export TZ='Asia/Shanghai'  # 设置时区
 - sed -i'' "s~git@github.com:Mybrc91/mybrc91.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/Mybrc91/mybrc91.github.io.git~"
@@ -30,5 +30,4 @@ install:
 - npm install -g hexo-cli
 - npm install
 script:
-- pwd
 - hexo clean && hexo g -d
