@@ -37,11 +37,11 @@ prism_plugin:
   line_number: true    # default false
 
 
-#MathJax 
-math:
-  engine: 'mathjax' # or 'katex'
+#MathJax
+#math:
+#  engine: 'katex' #mathjax' # or 'katex'
   #mathjax:
-    #src: custom_mathjax_source
+  #  src: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
    # config:
       # MathJax config
   #katex:
