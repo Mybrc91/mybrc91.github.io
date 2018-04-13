@@ -1,5 +1,5 @@
 ---
-title: Linux下挂载NTFS格式硬盘
+title: Raspberrypi下挂载NTFS格式硬盘
 date: 2018-04-12 23:31:04
 tags:
  - Linux
@@ -26,4 +26,9 @@ categories:
 ##### 编辑`/etc/fstab`文件，实现开机自动挂载
 
 在文件末尾追加如下行`/dev/sda1 /mnt/windows ntfs utf8,uid=1000,gid=1000,umask=755 0 0`
+
+#### 卸载磁盘
+输入命令`umount /mnt/windows`
+#### 查看磁盘信息
+输入命令`df -h`就可以看到所有磁盘的挂载信息
 
