@@ -17,8 +17,8 @@ before_install:
 - export TZ='Asia/Shanghai'  # 设置时区
 - sed -i'' "s~git@github.com:Mybrc91/mybrc91.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/Mybrc91/mybrc91.github.io.git~"
   _config.yml
-- git config --global user.name "cheng"
-- git config --global user.email gdzrch@163.com
+- git config --global user.name "Mybrc91"
+- git config --global user.email Mybrc91@gmail.com
 
 # Use sed to replace the SSH URL with the public URL, then initialize submodules
 - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
