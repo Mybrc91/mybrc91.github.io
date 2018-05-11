@@ -5,8 +5,8 @@
 # Site
 title: 功到自然成
 subtitle:
-description: gdzrch的blog
-author: gdzrch
+description: Mybrc91的blog
+author: Mybrc91
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -31,10 +31,10 @@ sequence:
     css_class:
 
 #代码高亮插件
-prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'default'
-  line_number: true    # default false
+# prism_plugin:
+#   mode: 'preprocess'    # realtime/preprocess
+#   theme: 'default'
+#   line_number: true    # default false
 
 
 #MathJax
