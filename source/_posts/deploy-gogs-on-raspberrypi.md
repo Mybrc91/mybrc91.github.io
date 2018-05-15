@@ -7,7 +7,8 @@ meta:
     content: deploy gogs on raspberrypi
   - name: keywords
     content: gogs git raspberrypi
-
+tag: gogs raspberrypi
+category: Linux
 ---
 # 在树莓派上部署git服务gogs
 

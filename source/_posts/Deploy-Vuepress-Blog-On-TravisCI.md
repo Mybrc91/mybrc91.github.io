@@ -7,6 +7,8 @@ meta:
     content: deploy vuepress blog on travisci
   - name: keywords
     content: travis ci vuepress
+tag: Vue
+category: Web
 
 ---
 # 通过TravisCI自动化部署VuePress到GithubPages
