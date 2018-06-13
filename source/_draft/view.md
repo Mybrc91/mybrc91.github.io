@@ -231,5 +231,68 @@ textview.requestLayout()
 下面实现一个跟手滑动view，只能使用view动画和改变布局参数的方式，scrollTo/scrollBy无法实现。
 
 
+## 弹性滑动
+
+view的滑动方式了解了以后，我们要实现弹性滑动。核心思想就是：把一次大的滑动分解成若干次小的滑动在一段时间内完成。实现方式有很多种，比如Scorller、Handler.postDelayed和Thread.sleep等。
+
+### 使用Scroller
+
+```kotlin
+
+val scroller = Scroller(context)
 
 
+fun smoothScrollTo(destX: Int, destY: Int) {
+    val scrollX = scrollX
+    val deltaX = destX - scrollX
+
+    val scrollY = scrollY
+    val deltaY = destY - scrollY
+
+    //在1000毫秒内向destX,deltaY滑动
+    scroller.startScroll(scrollX, scrollY, deltaX, deltaY, 1000)
+    invalidate()
+}
+
+override fun computeScroll() {
+    if (scroller.computeScrollOffset()) {
+        scrollTo(scroller.currX, scroller.currY)
+        postInvalidate()
+    }
+    super.computeScroll()
+}
+```
+
+以上是Scroller的典型使用方法，它的工作原理如下：当我们调用构造出来的Scroller的startScroll方法时，Scroller内部什么都没做，只是保存了传入的几个参数。`public void stratScroll(int startX, int startY, int dx, int dy, int duration)`,从方法签名可以看到`startX`和`startY`表示滑动的起点，`dx`和`dy`表示滑动的距离，`duration`表示滑动的时间。真正的滑动时在调用`invalidate()`方法后，会导致view的重绘，在view的draw方法中又会调用`computeScroll()`方法，这个是我们实现的真正滑动的方法，获取到scroller中的要滑动到的位置，做一次滑动，注意此处是view内容的滑动。然后继续调用`postInvalidate()`触发下一次滑动，如此反复直到滑动结束。
+
+`scroller.computeScrollOffset()`是根据时间流逝计算下一次滑动位置的方法，感兴趣的可以自行分析源码。它的返回值代表是否结束滑动，true代表未结束。
+
+通过分析，我们就知道了Scroller弹性滑动的原理。通过不断让view重绘的同时，计算下一次滑动的位置，然后通过scrollTo完成滑动。Scroller内部通过计算时间流逝的百分比计算滑动位置，没有用到任何类型的定时器，设计的很精妙。
+
+### 通过动画
+
+属性动画中的对象动画天然具体弹性滑动效果。
+```kotlin
+ObjectAnimator.ofFloat(textview, "translationX", 0f , 100f, 0f).setDuration(2000).start()
+```
+
+我们还可以利用值动画实现弹性滑动。
+
+```kotlin
+val startX = 0
+        val deltaX = 100
+        val valueAnimator = ValueAnimator.ofInt(0,1).setDuration(1000)
+        valueAnimator.addUpdateListener {
+            val fraction = it.animatedFraction
+            textview.scrollTo(startX + (deltaX*fraction).toInt(), 0)
+        }
+        valueAnimator.start()
+```
+
+这种方式和Scroller方法有些类似，不直接进行弹性动画，只是进行滑动位置的计算，再通过scrollTo完成动画。
+
+通过这种方式，可以实现各种复杂的动画效果。
+
+### 使用延时策略
+
+Handler和Thread可以通过延时策略来实现弹性滑动，也就是在经过一个延时后再进行滑动。
