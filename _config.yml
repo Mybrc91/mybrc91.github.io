@@ -30,6 +30,9 @@ sequence:
     theme: 'simple'
     css_class:
 
+mathjax:
+  cdn: 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js'
+
 #代码高亮插件
 # prism_plugin:
 #   mode: 'preprocess'    # realtime/preprocess
