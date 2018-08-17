@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+        <link rel="dns-prefetch" href="https://cdn-city.livere.com"/>
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Android View Develop | 
+        
+        功到自然成
+    </title>
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="Mybrc91的blog">
+    <meta name="keywords" content=",Android,View">
+    <meta name="theme-color" content="#0097A7">
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?ck5HQTrgAwBkXWwun1VdkA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="功到自然成">
+    <meta name="msapplication-starturl" content="gdzrch.win/post/Android-View-Develop.html">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="功到自然成">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="gdzrch.win/post/Android-View-Develop.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Android View Develop | 功到自然成">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="Mybrc91的blog">
+    <meta property="og:article:tag" content="Android"> <meta property="og:article:tag" content="View"> 
+
+    
+        <meta property="article:published_time" content="Wed Mar 22 2017 22:07:04 GMT+0800">
+        <meta property="article:modified_time" content="Fri Aug 17 2018 22:31:05 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="gdzrch.win/post/Android-View-Develop.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "gdzrch.win/post/Android-View-Develop.html",
+    "headline": "Android View Develop",
+    "datePublished": "Wed Mar 22 2017 22:07:04 GMT+0800",
+    "dateModified": "Fri Aug 17 2018 22:31:05 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Mybrc91",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "我们可以卑微如尘土，但不可扭曲如蛆虫"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "功到自然成",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Android,View",
+    "description": "Mybrc91的blog",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#View"><span class="post-toc-number">1.</span> <span class="post-toc-text">View</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Using-Views"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Using Views</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Implementing-a-Custom-View"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Implementing a Custom View</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#IDs"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">IDs</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Position"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Position</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Size-padding-and-margins"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Size, padding and margins</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Layout"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Layout</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Drawing"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">Drawing</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Event-Handling-and-Threading"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">Event Handling and Threading</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Focus-Handling"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">Focus Handling</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Touch-Mode"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">Touch Mode</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Scrolling"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">Scrolling</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Tags"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">Tags</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Themes"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">Themes</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Properties"><span class="post-toc-number">1.14.</span> <span class="post-toc-text">Properties</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Animation"><span class="post-toc-number">1.15.</span> <span class="post-toc-text">Animation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Security"><span class="post-toc-number">1.16.</span> <span class="post-toc-text">Security</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ViewGroup"><span class="post-toc-number">2.</span> <span class="post-toc-text">ViewGroup</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    <!-- $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png'); -->
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Android View Develop
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Mybrc91</strong>
+        <span>3月 22, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/View/">View</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android View Develop&url=gdzrch.win/post/Android-View-Develop.html&pic=gdzrch.win/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android View Develop&url=gdzrch.win/post/Android-View-Develop.html&via=Mybrc91" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=gdzrch.win/post/Android-View-Develop.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=gdzrch.win/post/Android-View-Develop.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>View类是用户界面的基本组件组件。一个View在屏幕上占据了一个矩形区域,负责绘制和事件处理。View是一个基础部件,用来创建交互式UI组件(按钮、文本框等)。<a href="https://developer.android.com/reference/android/view/ViewGroup.html" target="_blank" rel="noopener">ViewGroup</a>子类是布局的基类,它是看不见的容器,包含着一些View(或viewgroup)和定义他们的布局属性。</p>
+<h1 id="View"><a href="#View" class="headerlink" title="View"></a>View</h1><h2 id="Using-Views"><a href="#Using-Views" class="headerlink" title="Using Views"></a>Using Views</h2><p>所有在window中显示的view组成了一棵View树。<br>一旦view树被创建，可以执行以下几类操作：</p>
+<ul>
+<li>设置属性：通过代码或者布局</li>
+<li>设置焦点：系统框架会处理焦点来响应用户输入，强制焦点到View上使用<code>requestFocus</code>。</li>
+<li>设置Listener</li>
+<li>设置可见性：通过<a href="https://developer.android.com/reference/android/view/View.html#setVisibility(int" target="_blank" rel="noopener">setVisibility(int)</a>)</li>
+</ul>
+<h2 id="Implementing-a-Custom-View"><a href="#Implementing-a-Custom-View" class="headerlink" title="Implementing a Custom View"></a>Implementing a Custom View</h2><p>实现一个自定义的View,可以通过覆盖的一些View的方法。不过不需要覆盖所有这些方法。</p>
+<div class="wiz-table-body" style="overflow:auto"><table border="2" width="85%" align="center" style="font-size: 14px; margin-top: 0.5em; margin-right: 1em; margin-bottom: 1em; border-spacing: 0px; border: 0px; width: 877px; color: rgba(0, 0, 0, 0.682353); font-family: Roboto, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(247, 247, 247);"><thead><tr><th style="padding-right: 12px; padding-left: 12px; vertical-align: top; color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); font-weight: normal; width: 139px; background-color: rgb(153, 153, 153);" class="wiz-selected-cell-multi">Category</th><th style="padding-right: 12px; padding-left: 12px; vertical-align: top; color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); font-weight: normal; width: 396px; background-color: rgb(153, 153, 153);" class="wiz-selected-cell-multi">Methods</th><th style="padding-right: 12px; padding-left: 12px; vertical-align: top; color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); font-weight: normal; width: 341px; background-color: rgb(153, 153, 153);">Description</th></tr></thead><tbody><tr><td rowspan="2" style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 139px; background-color: inherit;">Creation</td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;">Constructors</td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px;"><span style="orphans: auto; text-align: start; text-indent: 0px; widows: 1; float: none; display: inline !important;">构造函数的一种形式为从代码创建,一种为布局文件创建。第二种形式需要解析和应用布局文件中定义的属性。</span></td></tr><tr><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onFinishInflate()" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onFinishInflate()</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">在view和它的所有子view从xml中inflate之后调用。</td></tr><tr><td rowspan="3" style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 139px; background-color: inherit;">Layout</td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onMeasure(int, int)" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onMeasure(int, int)</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">为此view和它的子view确定测量要求</td></tr><tr><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onLayout(boolean, int, int, int, int)" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onLayout(boolean, int, int, int, int)</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">当view为子元素分配尺寸和位置的时候调用</td></tr><tr><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onSizeChanged(int, int, int, int)" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onSizeChanged(int, int, int, int)</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">当view的size变化时调用</td></tr><tr><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 139px; background-color: inherit;">Drawing</td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onDraw(android.graphics.Canvas)" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onDraw(android.graphics.Canvas)</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">当绘制view时调用</td></tr><tr><td rowspan="4" style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 139px; background-color: inherit;">Event processing</td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onKeyDown(int, android.view.KeyEvent)" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onKeyDown(int, KeyEvent)</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">当按键事件发生时调用</td></tr><tr><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onKeyUp(int, android.view.KeyEvent)" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onKeyUp(int, KeyEvent)</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">当抬起按键时调用</td></tr><tr><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onTrackballEvent(android.view.MotionEvent)" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onTrackballEvent(MotionEvent)</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">当轨迹球移动时调用</td></tr><tr><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onTouchEvent(android.view.MotionEvent)" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onTouchEvent(MotionEvent)</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">当触摸事件发生时调用</td></tr><tr><td rowspan="2" style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 139px; background-color: inherit;">Focus</td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onFocusChanged(boolean, int, android.graphics.Rect)" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onFocusChanged(boolean, int, android.graphics.Rect)</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">当焦点变化时调用</td></tr><tr><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onWindowFocusChanged(boolean)" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onWindowFocusChanged(boolean)</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">当包含view的窗口焦点变化时调用</td></tr><tr><td rowspan="3" style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 139px; background-color: inherit;">Attaching</td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onAttachedToWindow()" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onAttachedToWindow()</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">当viwe attach到window上时调用</td></tr><tr><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onDetachedFromWindow()" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onDetachedFromWindow()</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">当viwe 从window detach时调用</td></tr><tr><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 396px; background-color: inherit;"><code style="font-size: 13px; color: rgb(0, 102, 0); font-stretch: normal; line-height: 18px; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><code style="font-stretch: normal; font-family: Consolas, 'Liberation Mono', Menlo, Monaco, Courier, monospace; -webkit-font-smoothing: subpixel-antialiased; margin-bottom: 0px;"><a href="https://developer.android.com/reference/android/view/View.html#onWindowVisibilityChanged(int)" style="color: rgb(3, 155, 229); text-decoration: none; margin-bottom: 0px;" target="_blank">onWindowVisibilityChanged(int)</a></code></code></td><td style="padding-right: 12px; padding-left: 12px; vertical-align: top; border-color: rgb(221, 221, 221); width: 341px; background-color: inherit;">当包含view的窗口可见性发生变化时调用</td></tr></tbody></table></div>
+
+
+<h2 id="IDs"><a href="#IDs" class="headerlink" title="IDs"></a>IDs</h2><p>view有一个整数id。这些id通常是分配在布局的XML文件,并用于查找特定的view在view树中。<br>定义：</p>
+<pre><code class="java">&lt;Button
+android:id=&quot;@+id/my_button&quot;
+android:layout_width=&quot;wrap_content&quot;
+android:layout_height=&quot;wrap_content&quot;
+android:text=&quot;@string/my_button_text&quot;/&gt;
+</code></pre>
+<p>获取：</p>
+<pre><code class="java">Button myButton = (Button) findViewById(R.id.my_button);
+
+</code></pre>
+<p>id不需要唯一,但最好唯一,以确保在获取id的view树中唯一。</p>
+<h2 id="Position"><a href="#Position" class="headerlink" title="Position"></a>Position</h2><p><a href="https://developer.android.com/reference/android/view/View.html#getLeft(" target="_blank" rel="noopener">getLeft()</a>)和<a href="https://developer.android.com/reference/android/view/View.html#getTop(" target="_blank" rel="noopener">getTop()</a>)获取到的是当前view相对于父元素的位置，例如,当<code>getLeft()</code>返回20,这意味着View位于父View左边界的右边20像素的位置。<br><a href="https://developer.android.com/reference/android/view/View.html#getRight(" target="_blank" rel="noopener">getRight()</a>)和<a href="https://developer.android.com/reference/android/view/View.html#getBottom(" target="_blank" rel="noopener">getBottom()</a>)同理。例如,调用<code>getRight()</code>类似于以下计算:<code>getLeft()</code> + <code>getWidth()</code></p>
+<h2 id="Size-padding-and-margins"><a href="#Size-padding-and-margins" class="headerlink" title="Size, padding and margins"></a>Size, padding and margins</h2><p>View 实际上有两对宽度和高度值。</p>
+<p>第一对是测量值，表示view想要多大，测量值通过<a href="https://developer.android.com/reference/android/view/View.html#getMeasuredWidth(" target="_blank" rel="noopener">getMeasuredWidth()</a>) 和 <a href="https://developer.android.com/reference/android/view/View.html#getMeasuredHeight(" target="_blank" rel="noopener">getMeasuredHeight()</a>) 获取。</p>
+<p>第二对就是view的绘制宽高，代表view在屏幕上绘制的真实宽高。这两个值和测量值有可能是相同的。通过<a href="https://developer.android.com/reference/android/view/View.html#getWidth(" target="_blank" rel="noopener">getWidth()</a>) 和 <a href="https://developer.android.com/reference/android/view/View.html#getHeight(" target="_blank" rel="noopener">getHeight()</a>) 获取。</p>
+<p>测量值是包括view的padding的，padding可以通过<a href="https://developer.android.com/reference/android/view/View.html#setPadding(int, int, int, int" target="_blank" rel="noopener">setPadding(int,int,int,int)</a>) 和 <a href="https://developer.android.com/reference/android/view/View.html#setPaddingRelative(int, int, int, int" target="_blank" rel="noopener">setPaddingRelative(int,int,int,int)</a>)设置。可以通过<code>getPaddingxxx()</code>获取。</p>
+<p>View可以定义padding，不能定义margins。ViewGroup可以定义margins。可以查看<a href="https://developer.android.com/reference/android/view/ViewGroup.html" target="_blank" rel="noopener">ViewGroup</a> 和 <a href="https://developer.android.com/reference/android/view/ViewGroup.MarginLayoutParams.html" target="_blank" rel="noopener">ViewGroup.MarginLayoutParams</a> .</p>
+<h2 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h2><p><code>Layout</code>分为两步：measure和layout。</p>
+<p>测量过程是实现<a href="https://developer.android.com/reference/android/view/View.html#measure(int, int" target="_blank" rel="noopener">measure(int,int)</a>) 方法，并且<strong>自顶向下</strong>递归遍历view树，同时计算出测量值并保存在view里。</p>
+<p>layout过程是实现<a href="https://developer.android.com/reference/android/view/View.html#layout(int, int, int, int" target="_blank" rel="noopener">layout(int,int,int,int)</a>) 方法，同样是<strong>自顶向下</strong>遍历view树。在layout过程中，每一个父view使用measure过程得到的测量值计算定位他包含的子view的位置。</p>
+<p>当view的<code>measure()</code>方法返回后，代表着当前view和他所包含的所有子view的 <a href="https://developer.android.com/reference/android/view/View.html#getMeasuredWidth(" target="_blank" rel="noopener">getMeasuredWidth()</a>) 和<a href="https://developer.android.com/reference/android/view/View.html#getMeasuredHeight(" target="_blank" rel="noopener">getMeasuredHeight()</a>) 值已经被设置。view的宽度和高度测量值必须在父view的约束范围内。父View可能会多次调用<code>measure()</code>测量子view。</p>
+<p>measure过程中，<a href="https://developer.android.com/reference/android/view/View.MeasureSpec.html" target="_blank" rel="noopener">View.MeasureSpec</a>表示view想要怎么测量和怎么摆放位置，这个值是传递给父View的。<code>LayoutParams</code>表示子view想要多大。</p>
+<p><code>LayoutParams</code>有以下几种值：</p>
+<ul>
+<li>确切的数值</li>
+<li>MATCH_PARENT 表示view想和父view一样大（不包括padding）</li>
+<li>WRAP_CONTENT 表示view只想要包裹住内容（包括padding）</li>
+</ul>
+<p><code>MeasureSpecs</code>包含以下几种：</p>
+<ul>
+<li>UNSPECIFIED 表示父view通过measure确定子view的测量值</li>
+<li>EXACTLY 表示父view规定确切的值给子view</li>
+<li>AT_MOST 表示父viwe规定子view的最大值</li>
+</ul>
+<p>layout过程是通过调用<a href="https://developer.android.com/reference/android/view/View.html#requestLayout(" target="_blank" rel="noopener">requestLayout</a>) 开始的。</p>
+<h2 id="Drawing"><a href="#Drawing" class="headerlink" title="Drawing"></a>Drawing</h2><p>Drawing就是在屏幕上绘制最新改变的区域。</p>
+<p>绘制的顺序是从父元素到子元素，兄弟元素按照添加到View树的顺序绘制。如果View有背景，背景的绘制在<code>onDraw()</code>之前。子View的绘制顺序能通过ViewGroup中<a href="https://developer.android.com/reference/android/view/ViewGroup.html#setChildrenDrawingOrderEnabled(boolean" target="_blank" rel="noopener">setChildrenDrawingOrderEnabled(boolean)</a>) 开启设置，使用<a href="https://developer.android.com/reference/android/view/View.html#setZ(float" target="_blank" rel="noopener">setZ(float)</a>) 设置顺序。</p>
+<p>强制使View 绘制，调用<a href="https://developer.android.com/reference/android/view/View.html#invalidate(" target="_blank" rel="noopener">invalidate()</a>)。</p>
+<h2 id="Event-Handling-and-Threading"><a href="#Event-Handling-and-Threading" class="headerlink" title="Event Handling and Threading"></a>Event Handling and Threading</h2><p>View的事件循环包括以下几个步骤：</p>
+<ol>
+<li>一个事件触发并且分发到合适的view上，此view处理事件，通知listeners。</li>
+<li>在处理事件的过程中，如果view的边界大小发生改变，view会调用<code>requestLayout()</code>。</li>
+<li>同样，在此过程中，如果view的外观样式发生改变，view会调用<code>invalidate()</code>。</li>
+<li>如果<code>requestLayout()</code>或者<code>invalidate()</code>被调用，android的view系统会在适当的时候调用measure，layout，draw流程。</li>
+</ol>
+<p>注意：view树的measure、layout、draw都在主线程进行，如果需要在子线程更新view，需要使用<a href="https://developer.android.com/reference/android/os/Handler.html" target="_blank" rel="noopener">Handler</a>。</p>
+<h2 id="Focus-Handling"><a href="#Focus-Handling" class="headerlink" title="Focus Handling"></a>Focus Handling</h2><p>Fragwork会处理焦点变化来响应用户输入。当view被removed、hidden和可用时，都会触发焦点变化。通过<a href="https://developer.android.com/reference/android/view/View.html#isFocusable(" target="_blank" rel="noopener">isFocusable()</a>) 判断view是否能获取焦点。通过<a href="https://developer.android.com/reference/android/view/View.html#setFocusable(boolean" target="_blank" rel="noopener">setFocusable(boolean)</a>) 设置可否获取焦点。当view处在touch mode时，分别通过<a href="https://developer.android.com/reference/android/view/View.html#isFocusableInTouchMode(" target="_blank" rel="noopener">isFocusableInTouchMode()</a>) 和<a href="https://developer.android.com/reference/android/view/View.html#setFocusableInTouchMode(boolean" target="_blank" rel="noopener">setFocusInTouchMode(boolean)</a>) 。</p>
+<p>焦点变化基于最接近算法实现的。可以修改默认算法，通过在xml文件设置属性，</p>
+<blockquote>
+<p>nextFocusDown<br>nextFocusLeft<br>nextFocusRight<br>nextFocusUp</p>
+</blockquote>
+<p>主动获取焦点通过<a href="https://developer.android.com/reference/android/view/View.html#requestFocus(" target="_blank" rel="noopener">requestFocus()</a>) 方法。</p>
+<h2 id="Touch-Mode"><a href="#Touch-Mode" class="headerlink" title="Touch Mode"></a>Touch Mode</h2><p>当用户通过键盘或者方向键操作界面的时候，需要显示当前指向条目的焦点，让用户可以感知输入。如果设备可以触摸，就不需要高亮或者显示可看到的焦点。这种模式就是<code>Touch Mode</code>。</p>
+<p>当设置处于Touch Mode时，只有设置<code>isFocusableInTouchMode</code>的view才能获取到焦点，比如text输入控件。其它的一些可触摸的view，比如Button，在被触摸到时候不会获取到焦点，只是触发click listener。</p>
+<p>用户在任何时候出发方向键，都会使view退出touch mode，并且让view获取到焦点，使用户可以使用方向键交互。</p>
+<p><code>Touch Mode</code>的维护是在<a href="https://developer.android.com/reference/android/app/Activity.html" target="_blank" rel="noopener">Activity</a> 里。调用<a href="https://developer.android.com/reference/android/view/View.html#isInTouchMode(" target="_blank" rel="noopener">isInTouchMode()</a>) 判断是否处于touch mode。</p>
+<h2 id="Scrolling"><a href="#Scrolling" class="headerlink" title="Scrolling"></a>Scrolling</h2><p>Framework提供了对view内容滚动的支持。包括跟踪记录X和Y轴的 scroll offset和画滚动条的原理一样。查看<a href="https://developer.android.com/reference/android/view/View.html#scrollBy(int, int" target="_blank" rel="noopener">scrollBy(int, int)</a>) 、<a href="https://developer.android.com/reference/android/view/View.html#scrollTo(int, int" target="_blank" rel="noopener">scrollTo(int, int)</a>)和<a href="https://developer.android.com/reference/android/view/View.html#awakenScrollBars(" target="_blank" rel="noopener">awakenScrollBars()</a>)这三个API。</p>
+<h2 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h2><p>和id不一样，tags是用来在view中储存数据的，方便使用。可以在xml里调用，用<a href="https://developer.android.com/reference/android/R.styleable.html#View_tag" target="_blank" rel="noopener">andrid:tag</a>属性：</p>
+<pre><code class="xml">
+&lt;View ...android:tag=&quot;@string/mytag_value&quot; /&gt;
+
+</code></pre>
+<p>在代码中设置tags使用<a href="https://developer.android.com/reference/android/view/View.html#setTag(java.lang.Object" target="_blank" rel="noopener">setTag(Object)</a>) 和 <a href="https://developer.android.com/reference/android/view/View.html#setTag(int, java.lang.Object" target="_blank" rel="noopener">setTag(int , Object)</a>)。</p>
+<h2 id="Themes"><a href="#Themes" class="headerlink" title="Themes"></a>Themes</h2><p>默认情况下，view的创建通过把theme 的context对象传入构造方法。要使用不同主题通过设置<a href="https://developer.android.com/reference/android/R.styleable.html#View_theme" target="_blank" rel="noopener">android:theme</a>属性，或者传递<a href="https://developer.android.com/reference/android/view/ContextThemeWrapper.html" target="_blank" rel="noopener">ContextThemeWrapper</a>到构造方法中。</p>
+<p>当设置<code>android：theme</code>属性后，自定义的主题会被设置到最顶层的inflation context中(可以查看 <a href="https://developer.android.com/reference/android/view/LayoutInflater.html" target="_blank" rel="noopener">LayoutInflater</a>)，被用在他自身和所有子元素中。</p>
+<h2 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h2><p>View暴露了<a href="https://developer.android.com/reference/android/view/View.html#ALPHA" target="_blank" rel="noopener">ALPHA</a>属性，和一些transform变换有关的属性，比如<a href="https://developer.android.com/reference/android/view/View.html#TRANSLATION_X" target="_blank" rel="noopener">TRANSLATION_X</a>和<a href="https://developer.android.com/reference/android/view/View.html#TRANSLATION_Y" target="_blank" rel="noopener">TRANSLATION_Y</a>。这些属性设置view的一些和绘制有关的持久状态，这些属性和方法也用在<a href="https://developer.android.com/reference/android/animation/Animator.html" target="_blank" rel="noopener">Animator</a>中。</p>
+<h2 id="Animation"><a href="#Animation" class="headerlink" title="Animation"></a>Animation</h2><p>从Anroid 3.0开始，做view动画的最好方式是使用<a href="https://developer.android.com/reference/android/animation/package-summary.html" target="_blank" rel="noopener">android.animation</a>包中的API。主要通过改变view对象的属性值，比如<code>alpha</code>和<code>tanslationX</code>等实现动画。相比较于3.0之前的<a href="https://developer.android.com/reference/android/view/animation/Animation.html" target="_blank" rel="noopener">Animation</a>API，代替了只改变view绘制方式的动画实现。尤其是<a href="https://developer.android.com/reference/android/view/ViewPropertyAnimator.html" target="_blank" rel="noopener">ViewPropertyAnimator</a>使改变view属性更加容易。</p>
+<h2 id="Security"><a href="#Security" class="headerlink" title="Security"></a>Security</h2><p>为了防止恶意的应用程序可能试图欺骗用户执行敏感操作，系统提供了一个触摸过滤机制,可用于安全访问敏感数据。</p>
+<p>调用<a href="https://developer.android.com/reference/android/view/View.html#setFilterTouchesWhenObscured(boolean" target="_blank" rel="noopener">setFilterTouchesWhenObscured(boolean)</a>)或者设置<code>andrid:filterTouchesWhenObscured</code>开启触摸过滤。开启过滤，当view被另一个可见view挡住后，系统会拒绝touch事件。此view将收不到任何事件。</p>
+<p>更高粒度的控制可以使用<a href="https://developer.android.com/reference/android/view/View.html#onFilterTouchEventForSecurity(android.view.MotionEvent" target="_blank" rel="noopener">onFilterTouchEventForSecurity(MotionEvent)</a>)去实现自定义的安全策略。可以查看<a href="https://developer.android.com/reference/android/view/MotionEvent.html#FLAG_WINDOW_IS_OBSCURED" target="_blank" rel="noopener">FLAG_WINDOW_IS_OBSCURED</a>。</p>
+<h1 id="ViewGroup"><a href="#ViewGroup" class="headerlink" title="ViewGroup"></a>ViewGroup</h1><p>ViewGroup是一个特殊的view,可以包含其他view(称为children)，ViewGroup 是布局和视图的基类容器。这个类还定义了<a href="https://developer.android.com/reference/android/view/ViewGroup.LayoutParams.html" target="_blank" rel="noopener">ViewGroup.LayoutParams</a>类作为基类的布局参数。</p>
+<pre><code class="java">
+import android.content.Context;
+
+import android.content.res.TypedArray;
+
+import android.util.AttributeSet;
+
+import android.view.Gravity;
+
+import android.view.View;
+
+import android.view.ViewGroup;
+
+import android.widget.RemoteViews;
+
+
+
+/**
+
+ * Example of writing a custom layout manager.  This is a fairly full-featured
+
+ * layout manager that is relatively general, handling all layout cases.  You
+
+ * can simplify it for more specific cases.
+
+ */
+
+@RemoteViews.RemoteView
+
+public class CustomLayout extends ViewGroup {
+
+    /** The amount of space used by children in the left gutter. */
+
+    private int mLeftWidth;
+
+
+
+    /** The amount of space used by children in the right gutter. */
+
+    private int mRightWidth;
+
+
+
+    /** These are used for computing child frames based on their gravity. */
+
+    private final Rect mTmpContainerRect = new Rect();
+
+    private final Rect mTmpChildRect = new Rect();
+
+
+
+    public CustomLayout(Context context) {
+
+        super(context);
+
+    }
+
+
+
+    public CustomLayout(Context context, AttributeSet attrs) {
+
+        this(context, attrs, 0);
+
+    }
+
+
+
+    public CustomLayout(Context context, AttributeSet attrs, int defStyle) {
+
+        super(context, attrs, defStyle);
+
+    }
+
+
+
+    /**
+
+     * Any layout manager that doesn&#39;t scroll will want this.
+
+     */
+
+    @Override
+
+    public boolean shouldDelayChildPressedState() {
+
+        return false;
+
+    }
+
+
+
+    /**
+
+     * Ask all children to measure themselves and compute the measurement of this
+
+     * layout based on the children.
+
+     */
+
+    @Override
+
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+
+        int count = getChildCount();
+
+
+
+        // These keep track of the space we are using on the left and right for
+
+        // views positioned there; we need member variables so we can also use
+
+        // these for layout later.
+
+        mLeftWidth = 0;
+
+        mRightWidth = 0;
+
+
+
+        // Measurement will ultimately be computing these values.
+
+        int maxHeight = 0;
+
+        int maxWidth = 0;
+
+        int childState = 0;
+
+
+
+        // Iterate through all children, measuring them and computing our dimensions
+
+        // from their size.
+
+        for (int i = 0; i &lt; count; i++) {
+
+            final View child = getChildAt(i);
+
+            if (child.getVisibility() != GONE) {
+
+                // Measure the child.
+
+                measureChildWithMargins(child, widthMeasureSpec, 0, heightMeasureSpec, 0);
+
+
+
+                // Update our size information based on the layout params.  Children
+
+                // that asked to be positioned on the left or right go in those gutters.
+
+                final LayoutParams lp = (LayoutParams) child.getLayoutParams();
+
+                if (lp.position == LayoutParams.POSITION_LEFT) {
+
+                    mLeftWidth += Math.max(maxWidth,
+
+                            child.getMeasuredWidth() + lp.leftMargin + lp.rightMargin);
+
+                } else if (lp.position == LayoutParams.POSITION_RIGHT) {
+
+                    mRightWidth += Math.max(maxWidth,
+
+                            child.getMeasuredWidth() + lp.leftMargin + lp.rightMargin);
+
+                } else {
+
+                    maxWidth = Math.max(maxWidth,
+
+                            child.getMeasuredWidth() + lp.leftMargin + lp.rightMargin);
+
+                }
+
+                maxHeight = Math.max(maxHeight,
+
+                        child.getMeasuredHeight() + lp.topMargin + lp.bottomMargin);
+
+                childState = combineMeasuredStates(childState, child.getMeasuredState());
+
+            }
+
+        }
+
+
+
+        // Total width is the maximum width of all inner children plus the gutters.
+
+        maxWidth += mLeftWidth + mRightWidth;
+
+
+
+        // Check against our minimum height and width
+
+        maxHeight = Math.max(maxHeight, getSuggestedMinimumHeight());
+
+        maxWidth = Math.max(maxWidth, getSuggestedMinimumWidth());
+
+
+
+        // Report our final dimensions.
+
+        setMeasuredDimension(resolveSizeAndState(maxWidth, widthMeasureSpec, childState),
+
+                resolveSizeAndState(maxHeight, heightMeasureSpec,
+
+                        childState &lt;&lt; MEASURED_HEIGHT_STATE_SHIFT));
+
+    }
+
+
+
+    /**
+
+     * Position all children within this layout.
+
+     */
+
+    @Override
+
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+
+        final int count = getChildCount();
+
+
+
+        // These are the far left and right edges in which we are performing layout.
+
+        int leftPos = getPaddingLeft();
+
+        int rightPos = right - left - getPaddingRight();
+
+
+
+        // This is the middle region inside of the gutter.
+
+        final int middleLeft = leftPos + mLeftWidth;
+
+        final int middleRight = rightPos - mRightWidth;
+
+
+
+        // These are the top and bottom edges in which we are performing layout.
+
+        final int parentTop = getPaddingTop();
+
+        final int parentBottom = bottom - top - getPaddingBottom();
+
+
+
+        for (int i = 0; i &lt; count; i++) {
+
+            final View child = getChildAt(i);
+
+            if (child.getVisibility() != GONE) {
+
+                final LayoutParams lp = (LayoutParams) child.getLayoutParams();
+
+
+
+                final int width = child.getMeasuredWidth();
+
+                final int height = child.getMeasuredHeight();
+
+
+
+                // Compute the frame in which we are placing this child.
+
+                if (lp.position == LayoutParams.POSITION_LEFT) {
+
+                    mTmpContainerRect.left = leftPos + lp.leftMargin;
+
+                    mTmpContainerRect.right = leftPos + width + lp.rightMargin;
+
+                    leftPos = mTmpContainerRect.right;
+
+                } else if (lp.position == LayoutParams.POSITION_RIGHT) {
+
+                    mTmpContainerRect.right = rightPos - lp.rightMargin;
+
+                    mTmpContainerRect.left = rightPos - width - lp.leftMargin;
+
+                    rightPos = mTmpContainerRect.left;
+
+                } else {
+
+                    mTmpContainerRect.left = middleLeft + lp.leftMargin;
+
+                    mTmpContainerRect.right = middleRight - lp.rightMargin;
+
+                }
+
+                mTmpContainerRect.top = parentTop + lp.topMargin;
+
+                mTmpContainerRect.bottom = parentBottom - lp.bottomMargin;
+
+
+
+                // Use the child&#39;s gravity and size to determine its final
+
+                // frame within its container.
+
+                Gravity.apply(lp.gravity, width, height, mTmpContainerRect, mTmpChildRect);
+
+
+
+                // Place the child.
+
+                child.layout(mTmpChildRect.left, mTmpChildRect.top,
+
+                        mTmpChildRect.right, mTmpChildRect.bottom);
+
+            }
+
+        }
+
+    }
+
+
+
+    // ----------------------------------------------------------------------
+
+    // The rest of the implementation is for custom per-child layout parameters.
+
+    // If you do not need these (for example you are writing a layout manager
+
+    // that does fixed positioning of its children), you can drop all of this.
+
+
+
+    @Override
+
+    public LayoutParams generateLayoutParams(AttributeSet attrs) {
+
+        return new CustomLayout.LayoutParams(getContext(), attrs);
+
+    }
+
+
+
+    @Override
+
+    protected LayoutParams generateDefaultLayoutParams() {
+
+        return new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+
+    }
+
+
+
+    @Override
+
+    protected ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams p) {
+
+        return new LayoutParams(p);
+
+    }
+
+
+
+    @Override
+
+    protected boolean checkLayoutParams(ViewGroup.LayoutParams p) {
+
+        return p instanceof LayoutParams;
+
+    }
+
+
+
+    /**
+
+     * Custom per-child layout information.
+
+     */
+
+    public static class LayoutParams extends MarginLayoutParams {
+
+        /**
+
+         * The gravity to apply with the View to which these layout parameters
+
+         * are associated.
+
+         */
+
+        public int gravity = Gravity.TOP | Gravity.START;
+
+
+
+        public static int POSITION_MIDDLE = 0;
+
+        public static int POSITION_LEFT = 1;
+
+        public static int POSITION_RIGHT = 2;
+
+
+
+        public int position = POSITION_MIDDLE;
+
+
+
+        public LayoutParams(Context c, AttributeSet attrs) {
+
+            super(c, attrs);
+
+
+
+            // Pull the layout param values from the layout XML during
+
+            // inflation.  This is not needed if you don&#39;t care about
+
+            // changing the layout behavior in XML.
+
+            TypedArray a = c.obtainStyledAttributes(attrs, R.styleable.CustomLayoutLP);
+
+            gravity = a.getInt(R.styleable.CustomLayoutLP_android_layout_gravity, gravity);
+
+            position = a.getInt(R.styleable.CustomLayoutLP_layout_position, position);
+
+            a.recycle();
+
+        }
+
+
+
+        public LayoutParams(int width, int height) {
+
+            super(width, height);
+
+        }
+
+
+
+        public LayoutParams(ViewGroup.LayoutParams source) {
+
+            super(source);
+
+        }
+
+    }
+
+}
+
+</code></pre>
+<p>在res/values/attrs.xml:中定义属性</p>
+<pre><code class="xml">
+&lt;declare-styleable name=&quot;CustomLayoutLP&quot;&gt;
+
+    &lt;attr name=&quot;android:layout_gravity&quot; /&gt;
+
+    &lt;attr name=&quot;layout_position&quot;&gt;
+
+        &lt;enum name=&quot;middle&quot; value=&quot;0&quot; /&gt;
+
+        &lt;enum name=&quot;left&quot; value=&quot;1&quot; /&gt;
+
+        &lt;enum name=&quot;right&quot; value=&quot;2&quot; /&gt;
+
+    &lt;/attr&gt;
+
+
+&lt;/declare-styleable&gt;
+
+</code></pre>
+<p>使用方法：</p>
+<pre><code class="java">
+&lt;com.example.android.apis.view.CustomLayout
+
+        xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+
+        xmlns:app=&quot;http://schemas.android.com/apk/res/com.example.android.apis&quot;
+
+        android:layout_width=&quot;match_parent&quot;
+
+        android:layout_height=&quot;match_parent&quot;&gt;
+
+
+
+    &lt;!-- put first view to left. --&gt;
+
+    &lt;TextView
+
+            android:background=&quot;@drawable/filled_box&quot;
+
+            android:layout_width=&quot;wrap_content&quot;
+
+            android:layout_height=&quot;wrap_content&quot;
+
+            app:layout_position=&quot;left&quot;
+
+            android:layout_gravity=&quot;fill_vertical|center_horizontal&quot;
+
+            android:text=&quot;l1&quot;/&gt;
+
+
+
+    &lt;!-- stack second view to left. --&gt;
+
+    &lt;TextView
+
+            android:background=&quot;@drawable/filled_box&quot;
+
+            android:layout_width=&quot;wrap_content&quot;
+
+            android:layout_height=&quot;wrap_content&quot;
+
+            app:layout_position=&quot;left&quot;
+
+            android:layout_gravity=&quot;fill_vertical|center_horizontal&quot;
+
+            android:text=&quot;l2&quot;/&gt;
+
+
+
+    &lt;!-- also put a view on the right. --&gt;
+
+    &lt;TextView
+
+            android:background=&quot;@drawable/filled_box&quot;
+
+            android:layout_width=&quot;wrap_content&quot;
+
+            android:layout_height=&quot;wrap_content&quot;
+
+            app:layout_position=&quot;right&quot;
+
+            android:layout_gravity=&quot;fill_vertical|center_horizontal&quot;
+
+            android:text=&quot;r1&quot;/&gt;
+
+
+
+    &lt;!-- by default views go in the middle; use fill vertical gravity --&gt;
+
+    &lt;TextView
+
+            android:background=&quot;@drawable/green&quot;
+
+            android:layout_width=&quot;wrap_content&quot;
+
+            android:layout_height=&quot;wrap_content&quot;
+
+            android:layout_gravity=&quot;fill_vertical|center_horizontal&quot;
+
+            android:text=&quot;fill-vert&quot;/&gt;
+
+
+
+    &lt;!-- by default views go in the middle; use fill horizontal gravity --&gt;
+
+    &lt;TextView
+
+            android:background=&quot;@drawable/green&quot;
+
+            android:layout_width=&quot;wrap_content&quot;
+
+            android:layout_height=&quot;wrap_content&quot;
+
+            android:layout_gravity=&quot;center_vertical|fill_horizontal&quot;
+
+            android:text=&quot;fill-horiz&quot;/&gt;
+
+
+
+    &lt;!-- by default views go in the middle; use top-left gravity --&gt;
+
+    &lt;TextView
+
+            android:background=&quot;@drawable/blue&quot;
+
+            android:layout_width=&quot;wrap_content&quot;
+
+            android:layout_height=&quot;wrap_content&quot;
+
+            android:layout_gravity=&quot;top|left&quot;
+
+            android:text=&quot;top-left&quot;/&gt;
+
+
+
+    &lt;!-- by default views go in the middle; use center gravity --&gt;
+
+    &lt;TextView
+
+            android:background=&quot;@drawable/blue&quot;
+
+            android:layout_width=&quot;wrap_content&quot;
+
+            android:layout_height=&quot;wrap_content&quot;
+
+            android:layout_gravity=&quot;center&quot;
+
+            android:text=&quot;center&quot;/&gt;
+
+
+
+    &lt;!-- by default views go in the middle; use bottom-right --&gt;
+
+    &lt;TextView
+
+            android:background=&quot;@drawable/blue&quot;
+
+            android:layout_width=&quot;wrap_content&quot;
+
+            android:layout_height=&quot;wrap_content&quot;
+
+            android:layout_gravity=&quot;bottom|right&quot;
+
+            android:text=&quot;bottom-right&quot;/&gt;
+
+
+
+&lt;/com.example.android.apis.view.CustomLayout&gt;
+
+</code></pre>
+<p>参考：<a href="https://developer.android.com/reference/android/view/View.html" target="_blank" rel="noopener">Android Develper Reference View</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 来必力 -->
+<div id="livere-comment">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc1Mi8xMTI4OQ==">
+	<script type="text/ls-javascript" id="livere-comment-js">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+       if (typeof LivereTower === 'function') { return; }
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+</div>
+</div>
+<style>
+    #livere-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/post/Sublime-Build-System-Console-Cannot-Print-Chinese.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/post/Vim-Cheat-Sheet.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Mybrc91's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        Mybrc91@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:Mybrc91@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Http/">Http<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Java/">Java<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Multimedia/">Multimedia<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programme/">Programme<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Tools/">Tools<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web/">Web<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/markdown/">markdown<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+     <!-- tags  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/tags/Android/">Android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/tags/Data/">Data<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/Java/">Java<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/tags/Linux/">Linux<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about.html" title="About Me">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About Me
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">24</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/Mybrc91" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>功到自然成
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed').css('overflow',"auto").css('max-height','70%');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+
+<script src=https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+    
+</html>

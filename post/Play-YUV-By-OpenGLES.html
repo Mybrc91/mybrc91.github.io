@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+        <link rel="dns-prefetch" href="https://cdn-city.livere.com"/>
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Play YUV By OpenGLES | 
+        
+        功到自然成
+    </title>
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="Mybrc91的blog">
+    <meta name="keywords" content=",Android,Multimedia,Video">
+    <meta name="theme-color" content="#0097A7">
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?ck5HQTrgAwBkXWwun1VdkA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="功到自然成">
+    <meta name="msapplication-starturl" content="gdzrch.win/post/Play-YUV-By-OpenGLES.html">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="功到自然成">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="gdzrch.win/post/Play-YUV-By-OpenGLES.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Play YUV By OpenGLES | 功到自然成">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="Mybrc91的blog">
+    <meta property="og:article:tag" content="Android"> <meta property="og:article:tag" content="Multimedia"> <meta property="og:article:tag" content="Video"> 
+
+    
+        <meta property="article:published_time" content="Mon Mar 06 2017 20:46:04 GMT+0800">
+        <meta property="article:modified_time" content="Fri Aug 17 2018 22:31:05 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="gdzrch.win/post/Play-YUV-By-OpenGLES.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "gdzrch.win/post/Play-YUV-By-OpenGLES.html",
+    "headline": "Play YUV By OpenGLES",
+    "datePublished": "Mon Mar 06 2017 20:46:04 GMT+0800",
+    "dateModified": "Fri Aug 17 2018 22:31:05 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Mybrc91",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "我们可以卑微如尘土，但不可扭曲如蛆虫"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "功到自然成",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Android,Multimedia,Video",
+    "description": "Mybrc91的blog",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#涉及到的知识点"><span class="post-toc-number">1.</span> <span class="post-toc-text">涉及到的知识点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GLSurfaceView"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">GLSurfaceView</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GLSurfaceView-Renderer"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">GLSurfaceView.Renderer</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#OpenGL坐标系统"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">OpenGL坐标系统</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#顶点坐标"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">顶点坐标</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#纹理坐标"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">纹理坐标</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#OpenGL-2-0-pipeline"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">OpenGL 2.0 pipeline</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Vertex（顶点）输入"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">Vertex（顶点）输入</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Shader（着色器）"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">Shader（着色器）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Vertex-shader"><span class="post-toc-number">1.4.2.1.</span> <span class="post-toc-text">Vertex shader</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Fragment-shader"><span class="post-toc-number">1.4.2.2.</span> <span class="post-toc-text">Fragment shader</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Compiling-shader"><span class="post-toc-number">1.4.2.3.</span> <span class="post-toc-text">Compiling shader</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Combining-shaders-into-a-program"><span class="post-toc-number">1.4.2.4.</span> <span class="post-toc-text">Combining shaders into a program</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Making-the-link-between-vertex-data-and-attributes"><span class="post-toc-number">1.4.2.5.</span> <span class="post-toc-text">Making the link between vertex data and attributes</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Vertex-Array-Objects"><span class="post-toc-number">1.4.2.6.</span> <span class="post-toc-text">Vertex Array Objects</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Drawing"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">Drawing</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Uniforms"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">Uniforms</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Adding-some-more-colors"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">Adding some more colors</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Element-buffers"><span class="post-toc-number">1.4.6.</span> <span class="post-toc-text">Element buffers</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Textures-objects-and-parameters"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Textures objects and parameters</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Wrapping"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">Wrapping</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Filtering"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">Filtering</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Loading-texture-images"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Loading texture images</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#SOIL"><span class="post-toc-number">1.6.0.1.</span> <span class="post-toc-text">SOIL</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Using-a-texture"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">Using a texture</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Texture-units"><span class="post-toc-number">1.6.1.1.</span> <span class="post-toc-text">Texture units</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实例"><span class="post-toc-number">2.</span> <span class="post-toc-text">实例</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    <!-- $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png'); -->
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Play YUV By OpenGLES
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Mybrc91</strong>
+        <span>3月 06, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Multimedia/">Multimedia</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Video/">Video</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Play YUV By OpenGLES&url=gdzrch.win/post/Play-YUV-By-OpenGLES.html&pic=gdzrch.win/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Play YUV By OpenGLES&url=gdzrch.win/post/Play-YUV-By-OpenGLES.html&via=Mybrc91" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=gdzrch.win/post/Play-YUV-By-OpenGLES.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=gdzrch.win/post/Play-YUV-By-OpenGLES.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>Android平台上通过OpenGLES显示yuv数据</p>
+<h2 id="涉及到的知识点"><a href="#涉及到的知识点" class="headerlink" title="涉及到的知识点"></a>涉及到的知识点</h2><h3 id="GLSurfaceView"><a href="#GLSurfaceView" class="headerlink" title="GLSurfaceView"></a>GLSurfaceView</h3><p>先看一下源码定义</p>
+<blockquote>
+<p> /*</p>
+<pre><code>* An implementation of SurfaceView that uses the dedicated surface for
+* displaying OpenGL rendering.
+* &lt;p&gt;
+* A GLSurfaceView provides the following features:
+* &lt;p&gt;
+* &lt;ul&gt;
+* &lt;li&gt;Manages a surface, which is a special piece of memory that can be
+* composited into the Android view system.
+* &lt;li&gt;Manages an EGL display, which enables OpenGL to render into a surface.
+* &lt;li&gt;Accepts a user-provided Renderer object that does the actual rendering.
+* &lt;li&gt;Renders on a dedicated thread to decouple rendering performance from the
+* UI thread.
+* &lt;li&gt;Supports both on-demand and continuous rendering.
+* &lt;li&gt;Optionally wraps, traces, and/or error-checks the renderer&#39;s OpenGL calls.
+* &lt;/ul&gt;
+*/
+</code></pre><p> public class GLSurfaceView extends SurfaceView implements SurfaceHolder.Callback </p>
+</blockquote>
+<p>GLSurfaceView继承SurfaceView实现了SurfaceHolder.Callback接口，专用于显示OpenGL render的surface。<br>GLSurfaceView有以下几个特性</p>
+<ol>
+<li>管理一个Android View系统上的Surface,在专用内存区域上</li>
+<li>管理一个EGL 显示系统，使OpenGL能 render数据在surface</li>
+<li>需要一个用户自定义的Renderer去实现渲染显示</li>
+<li>为了提高性能，在GLSurfaceView内部有单独线程运行render，不在UI线程</li>
+<li>支持按需和持续渲染</li>
+<li>对于Renderer里的OpenGL方法调用，可以wraps，traces，和error-checks</li>
+</ol>
+<h3 id="GLSurfaceView-Renderer"><a href="#GLSurfaceView-Renderer" class="headerlink" title="GLSurfaceView.Renderer"></a>GLSurfaceView.Renderer</h3><p>先看源码</p>
+<blockquote>
+<p>  /**</p>
+<pre><code> * A generic renderer interface.
+ * &lt;p&gt;
+ * The renderer is responsible for making OpenGL calls to render a frame.
+ * &lt;p&gt;
+ * GLSurfaceView clients typically create their own classes that implement
+ * this interface, and then call {@link GLSurfaceView#setRenderer} to
+ * register the renderer with the GLSurfaceView.
+ * &lt;p&gt;
+ *
+ * &lt;h3&gt;Threading&lt;/h3&gt;
+ * The renderer will be called on a separate thread, so that rendering
+ * performance is decoupled from the UI thread. Clients typically need to
+ * communicate with the renderer from the UI thread, because that&#39;s where
+ * input events are received. Clients can communicate using any of the
+ * standard Java techniques for cross-thread communication, or they can
+ * use the {@link GLSurfaceView#queueEvent(Runnable)} convenience method.
+ * &lt;p&gt;
+ * &lt;h3&gt;EGL Context Lost&lt;/h3&gt;
+ * There are situations where the EGL rendering context will be lost. This
+ * typically happens when device wakes up after going to sleep. When
+ * the EGL context is lost, all OpenGL resources (such as textures) that are
+ * associated with that context will be automatically deleted. In order to
+ * keep rendering correctly, a renderer must recreate any lost resources
+ * that it still needs. The {@link #onSurfaceCreated(GL10, EGLConfig)} method
+ * is a convenient place to do this.
+ *
+ *
+ * @see #setRenderer(Renderer)
+ */
+public interface Renderer 
+</code></pre></blockquote>
+<p>主要有以下两点需要注意：</p>
+<ol>
+<li>由于renderer运行在<strong>子线程</strong>，UI线程要和renderer所在的线程通信，可以使用任何java的进程通信技术，也可以用GLSurfaceView提供了一个queueEvent(Runnable)方法，实现方式是通过wait，notify，synchronized机制，具体可以深入源码查看。</li>
+<li>EGL Context丢失问题，当设备从休眠中唤醒时可以出现context丢失问题。当context丢失时，所有和它相关联的OpenGL资源都将被自动删除，例如texture。为了是renderer运行正常，需要在onSurfaceCreated回调中初始化renderer需要的OpenGL资源。</li>
+</ol>
+<h3 id="OpenGL坐标系统"><a href="#OpenGL坐标系统" class="headerlink" title="OpenGL坐标系统"></a>OpenGL坐标系统</h3><h4 id="顶点坐标"><a href="#顶点坐标" class="headerlink" title="顶点坐标"></a>顶点坐标</h4><p>OpenGLES 中坐标系统如下图所示：<br><img src="/images/coordinates.png" alt="顶点坐标"></p>
+<p>通过这个坐标系统映射到各种类型的设置屏幕，左图是OpenGL的坐标系统，右图是设备中映射的坐标系统，把各种类型的屏幕都当成正方形划分</p>
+<h4 id="纹理坐标"><a href="#纹理坐标" class="headerlink" title="纹理坐标"></a>纹理坐标</h4><p>OpenGLES 中的texture纹理坐标系统如下图所示：<br><img src="/images/texture-coordinates.png" alt="纹理坐标"></p>
+<p>纹理坐标的0，0点在左下角</p>
+<h3 id="OpenGL-2-0-pipeline"><a href="#OpenGL-2-0-pipeline" class="headerlink" title="OpenGL 2.0 pipeline"></a>OpenGL 2.0 pipeline</h3><p>OpenGL渲染管线pipeline包含从输入数据到输出成一张图片的所有流程，如下图所示：</p>
+<p><img src="/images/openglv2_pipeline.png" alt="OpenGL 2.0 pipeline"> </p>
+<p>顶点坐标vertices，定义了要显示的形状。最终会转换成texture坐标显示，2D或3D。</p>
+<blockquote>
+<p>It all begins with the vertices, these are the points from which shapes like triangles will later be constructed. Each of these points is stored with certain attributes and it’s up to you to decide what kind of attributes you want to store. Commonly used attributes are 3D position in the world and texture coordinates.</p>
+</blockquote>
+<blockquote>
+<p>The vertex shader is a small program running on your graphics card that processes every one of these input vertices individually. This is where the perspective transformation takes place, which projects vertices with a 3D world position onto your 2D screen! It also passes important attributes like color and texture coordinates further down the pipeline.</p>
+</blockquote>
+<blockquote>
+<p>After the input vertices have been transformed, the graphics card will form triangles, lines or points out of them. These shapes are called primitives because they form the basis of more complex shapes. There are some additional drawing modes to choose from, like triangle strips and line strips. These reduce the number of vertices you need to pass if you want to create objects where each next primitive is connected to the last one, like a continuous line consisting of several segments.</p>
+</blockquote>
+<blockquote>
+<p>The following step, the geometry shader, is completely optional and was only recently introduced. Unlike the vertex shader, the geometry shader can output more data than comes in. It takes the primitives from the shape assembly stage as input and can either pass a primitive through down to the rest of the pipeline, modify it first, completely discard it or even replace it with other primitive(s). Since the communication between the GPU and the rest of the PC is relatively slow, this stage can help you reduce the amount of data that needs to be transferred. With a voxel game for example, you could pass vertices as point vertices, along with an attribute for their world position, color and material and the actual cubes can be produced in the geometry shader with a point as input!</p>
+</blockquote>
+<blockquote>
+<p>After the final list of shapes is composed and converted to screen coordinates, the rasterizer turns the visible parts of the shapes into pixel-sized fragments. The vertex attributes coming from the vertex shader or geometry shader are interpolated and passed as input to the fragment shader for each fragment. As you can see in the image, the colors are smoothly interpolated over the fragments that make up the triangle, even though only 3 points were specified.</p>
+</blockquote>
+<blockquote>
+<p>The fragment shader processes each individual fragment along with its interpolated attributes and should output the final color. This is usually done by sampling from a texture using the interpolated texture coordinate vertex attributes or simply outputting a color. In more advanced scenarios, there could also be calculations related to lighting and shadowing and special effects in this program. The shader also has the ability to discard certain fragments, which means that a shape will be see-through there.</p>
+</blockquote>
+<blockquote>
+<p>Finally, the end result is composed from all these shape fragments by blending them together and performing depth and stencil testing. All you need to know about these last two right now, is that they allow you to use additional rules to throw away certain fragments and let others pass. For example, if one triangle is obscured by another triangle, the fragment of the closer triangle should end up on the screen.</p>
+</blockquote>
+<blockquote>
+<p>Now that you know how your graphics card turns an array of vertices into an image on the screen, let’s get to work!</p>
+</blockquote>
+<p>引用自 <a href="https://open.gl/drawing" target="_blank" rel="noopener">https://open.gl</a> </p>
+<h4 id="Vertex（顶点）输入"><a href="#Vertex（顶点）输入" class="headerlink" title="Vertex（顶点）输入"></a>Vertex（顶点）输入</h4><p>创建顶点坐标，定义绘制区域</p>
+<blockquote>
+<p>float vertices[] = {<br>     0.0f,  0.5f, // Vertex 1 (X, Y)<br>     0.5f, -0.5f, // Vertex 2 (X, Y)<br>    -0.5f, -0.5f  // Vertex 3 (X, Y)<br>};</p>
+</blockquote>
+<p>创建Vertex Buffer Object (VBO)对象，为了把顶点数据加载到GPU缓冲区</p>
+<blockquote>
+<p>mVbo = new int[2];<br>  GLES20.glGenBuffers(2, mVbo, 0); </p>
+</blockquote>
+<p>在数据真正加载到缓存区中，还要调用glBindBuffer方法</p>
+<blockquote>
+<p>GLES20.glBindBuffer(GLES20.GL_ARRAY_BUFFER, mVbo[0]);</p>
+</blockquote>
+<p>glBindBuffer激活缓存区使顶点数据可以copy到内存里</p>
+<blockquote>
+<p>GLES20.glBufferData(GLES20.GL_ARRAY_BUFFER, sizeof(vertices), vertices,  GLES20.GL_STATIC_DRAW);</p>
+</blockquote>
+<p>这个函数激活数组缓冲区。第二个参数指定字节数。最后一个参数是非常重要的,它决定顶点数据的使用方式</p>
+<ul>
+<li><strong>GL_STATIC_DRAW</strong> : vertex数据加载一次，渲染多次</li>
+<li><strong>GL_DYNAMIC_DRAW</strong> : vertex数据加载一次, 可能随时会改变, 也会渲染多次</li>
+<li><strong>GL_STREAM_DRAW</strong> :  vertex数据加载一次，渲染一次</li>
+</ul>
+<p>这种值将决定什么样的内存数据存储在你的显卡的最高效率。例如,与GL_STREAM_DRAW VBOs类型可能在内存中存储数据,允许更快的写和稍微慢渲染。</p>
+<p>现在顶点数据已经存放到了GPU内存中，但是GPU还不知道怎么使用这些数据，下面将做的是告诉GPU如何处理顶点数据。</p>
+<h4 id="Shader（着色器）"><a href="#Shader（着色器）" class="headerlink" title="Shader（着色器）"></a>Shader（着色器）</h4><p>我们需要指示GPU如何处理数据。必须实现顶点着色器（vertex shader）和片段着色器（fragment shader）来得到要绘制到屏幕上的数据,几何着色器（geometry shader）是可选的。</p>
+<p>shader是c风格的语言称为GLSL(OpenGL着色语言)。OpenGL将从源代码编译程序在运行时并将其复制到GPU。</p>
+<h5 id="Vertex-shader"><a href="#Vertex-shader" class="headerlink" title="Vertex shader"></a>Vertex shader</h5><p>顶点着色器程序处理顶点数组中每个顶点及其属性。它的职责是输出在屏幕设备坐标系统上的最终顶点位置和片段着色器需要的任何数据。这就是为什么3D转换应该发生在这里。片段着色器依赖各种属性比如颜色和纹理坐标,这通常是从输入直接输出,没有任何计算。</p>
+<blockquote>
+<p>in vec2 position;</p>
+</blockquote>
+<blockquote>
+<p>void main()<br>{<br>    gl_Position = vec4(position, 0.0, 1.0);<br>}</p>
+</blockquote>
+<h5 id="Fragment-shader"><a href="#Fragment-shader" class="headerlink" title="Fragment shader"></a>Fragment shader</h5><p>顶点着色器的输出在屏幕上插值像素，这些像素被称为片段和片段着色器操作。就像顶点着色器有一个强制性的输出,片段着色器输出像素的颜色。计算从顶点开始的颜色,纹理坐标和任何来自顶点着色器的数据。</p>
+<p>以下是显示白色的例子</p>
+<blockquote>
+<p>out vec4 outColor;</p>
+</blockquote>
+<blockquote>
+<p>void main()<br>{<br>    outColor = vec4(1.0, 1.0, 1.0, 1.0);<br>}</p>
+</blockquote>
+<p>你会注意到,我们不使用一些内置变量输出颜色,如gl_FragColor。这是因为一个片段着色器可以实际上输出多个颜色,我们将会看到如何处理当加载这些着色器。outColor变量使用vec4类型,因为每个颜色由r、g、b、a组成。颜色在OpenGL通常表示为浮点数在0.0和1.0之间,而不是常见的0到255。</p>
+<h5 id="Compiling-shader"><a href="#Compiling-shader" class="headerlink" title="Compiling shader"></a>Compiling shader</h5><p>从文件或硬编码的字符串加载着色器代码，然后编译着色器。就像顶点缓冲区VBO的创建一样,它也要创建一个着色器对象和加载数据。</p>
+<blockquote>
+<p>int vertexShader = GLES20.glCreateShader(GL_VERTEX_SHADER);<br>GLES20.glShaderSource(vertexShader, vertexSource);</p>
+</blockquote>
+<p>然后编译shader，就可以被GPU执行了</p>
+<blockquote>
+<p>GLES20.glCompileShader(vertexShader);</p>
+</blockquote>
+<p>如果shader出错，是无法通过glGetError捕获的。通过以下方式debug着色器的编译。</p>
+<blockquote>
+<p>Checking if a shader compiled successfully</p>
+<pre><code class="java">   int[] status = new int[1];
+   GLES20.glGetShaderiv(vertexShader, GLES20.GL_COMPILE_STATUS, status, 0);
+   if (status[0] == 0){
+        Log.e(TAG, &quot;compile shader error&quot;);
+        Log.e(TAG, GLES20.glGetShaderInfoLog(i));
+        GLES20.glDeleteShader(i);
+        vertexShader = status;
+    }
+</code></pre>
+<p>If status is equal to GL_TRUE, then your shader was compiled successfully. </p>
+</blockquote>
+<p>获取编译日志</p>
+<blockquote>
+<p>char buffer[512];<br>   glGetShaderInfoLog(vertexShader, 512, NULL, buffer);</p>
+</blockquote>
+<p>这将存储前511字节+null结尾的编译日志到指定的缓冲区。日志也可以记录有用的警告即使编译成功。</p>
+<p>片段着色器编译也是一样的</p>
+<blockquote>
+<p>int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);<br>GLES20.glShaderSource(fragmentShader,  fragmentSource);<br>GLES20.glCompileShader(fragmentShader);</p>
+</blockquote>
+<h5 id="Combining-shaders-into-a-program"><a href="#Combining-shaders-into-a-program" class="headerlink" title="Combining shaders into a program"></a>Combining shaders into a program</h5><p>直到现在为止顶点和片段着色器是两个独立的对象。虽然他们被组织起来一起工作,但他们还没有真正连接。这种联系是由这两个着色器创建一个program。</p>
+<pre><code class="java">  int shaderProgram = GLES20.glCreateProgram();
+  if (shaderProgram != 0) {
+          GLES20.glAttachShader(shaderProgram, vertexShader);
+          checkGlError(&quot;glAttachShader&quot;);
+          GLES20.glAttachShader(shaderProgram, fragmentShader);
+          checkGlError(&quot;glAttachShader&quot;);
+  }
+</code></pre>
+<p>因为片段着色器允许写入多个缓冲区,需要显式地指定输出缓冲区。这需要在连接程序之前执行。然而,由于默认这是0,现在只有一个输出,以下代码没有必要:</p>
+<blockquote>
+<p>glBindFragDataLocation(shaderProgram, 0, “outColor”);</p>
+</blockquote>
+<p>使用glDrawBuffers当渲染多个缓冲区时,因为只有第一个输出缓冲区是默认启用的。</p>
+<p>链接program</p>
+<pre><code class="java">          GLES20.glLinkProgram(shaderProgram);
+          int[] linkStatus = new int[1];
+          GLES20.glGetProgramiv(shaderProgram, GLES20.GL_LINK_STATUS, linkStatus, 0);
+          if (linkStatus[0] != GLES20.GL_TRUE) {
+              Log.e(TAG, &quot;Could not link shaderProgram: &quot;);
+              Log.e(TAG, GLES20.glGetProgramInfoLog(shaderProgram));
+              GLES20.glDeleteProgram(shaderProgram);
+              shaderProgram = 0;
+          }
+</code></pre>
+<p>真正使用shader在program的调用：</p>
+<blockquote>
+<p>GLES20.glUseProgram(shaderProgram);</p>
+</blockquote>
+<p>此时program才会在处于运行状态</p>
+<h5 id="Making-the-link-between-vertex-data-and-attributes"><a href="#Making-the-link-between-vertex-data-and-attributes" class="headerlink" title="Making the link between vertex data and attributes"></a>Making the link between vertex data and attributes</h5><p>虽然我们现在已经准备好了顶点数据和着色器,OpenGL仍然不知道这些属性的格式和顺序。首先需要获取输入顶点着色器的”position”属性引用:</p>
+<blockquote>
+<p>int positionAttrib = GLES20.glGetAttribLocation(shaderProgram, “position”);</p>
+</blockquote>
+<p>现在可以指定输入的数据是如何从数组中检索:</p>
+<blockquote>
+<p>GLES20.glVertexAttribPointer(positionAttrib, 2, GLES20.GL_FLOAT, false, 0, 0);</p>
+</blockquote>
+<p>第一个参数是输入属性的引用。第二个参数指定输入值的数量,也就是vec的维度。第三个参数指定了每个组件的类型和第四个参数指定是否应规范化输入值在-1.0和1.0之间(或0.0和1.0根据格式),如果他们不是浮点数。</p>
+<p>最后两个参数是最重要的因为他们指定属性在顶点数组中是如何布局的。第一个数字指定stride（步幅）,或数组中每个位置属性有多少字节。值0意味着之间没有数据。目前这种情况,每个顶点的位置立即紧随其后的是下一个顶点的位置。最后一个参数指定偏移量,或者从一开始就有多少字节数组的属性。因为没有其他属性,这是0。</p>
+<p>重要的是要知道这个函数将存储不仅stride（步幅）和offset,还有绑定在GL_ARRAY_BUFFER上的VBOs。这意味着不必显式地绑定VBO当实际渲染的时候。这也意味着您可以使用不同的VBO给每个属性。</p>
+<p>如果你不完全理解这点，后面通过函数调用可以添加更多的属性，现在顶点属性数组需要enable：</p>
+<blockquote>
+<p>GLES20.glEnableVertexAttribArray(positionAttrib);</p>
+</blockquote>
+<h5 id="Vertex-Array-Objects"><a href="#Vertex-Array-Objects" class="headerlink" title="Vertex Array Objects"></a>Vertex Array Objects</h5><p>真正的图形程序使用许多不同的着色器和vertex layouts实现各种需求和特殊效果。改变shader program 调用glUseProgram很简单,但它很不方便,如果你不得不每次都重新设置的所有属性。</p>
+<p>幸运的是,OpenGL使用Vertex Array Objects (VAO)解决这个问题。VAOs存储所有的attributes和VBOs的link关系用raw vertex data。<br>创建一个VAO</p>
+<blockquote>
+<p>GLuint vao;<br>glGenVertexArrays(1, &amp;vao);</p>
+</blockquote>
+<p>绑定</p>
+<blockquote>
+<p>glBindVertexArray(vao);</p>
+</blockquote>
+<p>一旦你绑定VAO,每次调用glVertexAttribPointer,这些信息将存储在VAO。这使得切换不同的顶点数据和顶点格式和绑定不同的VAO一样容易!记住,一个VAO不存储任何顶点数据本身,它只是引用VBOs和保存获取属性值的方法。</p>
+<p>确保你已经创建并绑定VAO在程序的开始。任何绑定之前的VBO buffers都将被忽略</p>
+<h4 id="Drawing"><a href="#Drawing" class="headerlink" title="Drawing"></a>Drawing</h4><p>现在已经加载了顶点数据,创建了着色程序和相关数据的属性,就可以绘制了。用于存储属性信息的VAO已经绑定,所以你不必担心。剩下的就是调用glDrawArrays在主循环:</p>
+<blockquote>
+<p>GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);</p>
+</blockquote>
+<p>第一个参数指定形状,第二个参数指定跳过开头多少个顶点和最后一个参数指定处理顶点的数量。</p>
+<p>如果你什么都没看到,确保着色器编译正确,程序已经正确连接,VBO已经启用,VAO已经绑定在指定属性之前,你的顶点数据是正确的,glGetError返回0。</p>
+<h4 id="Uniforms"><a href="#Uniforms" class="headerlink" title="Uniforms"></a>Uniforms</h4><p>现在的白色三角形被硬编码到着色器代码,但是如果你想要在shader编译后改变它呢?vertex attributes并不是唯一的方法来传递数据到着色器程序。还有另一种方法将数据传递给着色器叫做<em>Uniforms</em>。这些本质上是全局变量,有相同的值为vertices或fragments。</p>
+<p>一个uniform例子</p>
+<blockquote>
+<p>uniform vec3 triangleColor;<br>  out vec4 outColor;<br>void main()<br>{<br>    outColor = vec4(triangleColor, 1.0);<br>}</p>
+</blockquote>
+<p>设置uniform和设置顶点属性类似，首先要获取location</p>
+<blockquote>
+<p>GLint uniColor = glGetUniformLocation(shaderProgram, “triangleColor”);</p>
+</blockquote>
+<p>可以使用任何glUniformXY函数改变uniform的值,其中X是数量，y是类型。常见的类型是float（f）、doudle（d）、int（i）。</p>
+<blockquote>
+<p>glUniform3f(uniColor, 1.0f, 0.0f, 0.0f);</p>
+</blockquote>
+<p>如果运行程序,将看到红色。可以让颜色值随时间改变，显示的颜色也会变化。</p>
+<h4 id="Adding-some-more-colors"><a href="#Adding-some-more-colors" class="headerlink" title="Adding some more colors"></a>Adding some more colors</h4><p>虽然uniform可以改变运行时颜色，通过添加颜色属性到顶点数组中，也可以完成同样的效果。</p>
+<blockquote>
+<p>float vertices[] = {<br>     0.0f,  0.5f, 1.0f, 0.0f, 0.0f, // Vertex 1: Red<br>     0.5f, -0.5f, 0.0f, 1.0f, 0.0f, // Vertex 2: Green<br>    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f  // Vertex 3: Blue<br>};</p>
+</blockquote>
+<p>为了简单，没有添加a值<br>修改顶点着色器，使其输出颜色值到fragment着色器中</p>
+<blockquote>
+<p>in vec2 position;<br>in vec3 color;<br>out vec3 Color;<br>void main()<br>{<br>    Color = color;<br>    gl_Position = vec4(position, 0.0, 1.0);<br>}</p>
+</blockquote>
+<p>把输出的颜色输入到fragment着色器中</p>
+<blockquote>
+<p>in vec3 Color;<br>out vec4 outColor;<br>void main()<br>{<br>    outColor = vec4(Color, 1.0);<br>}</p>
+</blockquote>
+<p>注意输入输出的名字要统一</p>
+<p>现在,我们只需要改变属性的引用，作用于X,Y,R,G,B属性顺序</p>
+<blockquote>
+<p>GLint posAttrib = glGetAttribLocation(shaderProgram, “position”);<br>glEnableVertexAttribArray(posAttrib);<br>glVertexAttribPointer(posAttrib, 2, GL_FLOAT, GL_FALSE, 5*sizeof(float), 0);</p>
+</blockquote>
+<blockquote>
+<p>GLint colAttrib = glGetAttribLocation(shaderProgram, “color”);<br>glEnableVertexAttribArray(colAttrib);<br>glVertexAttribPointer(colAttrib, 3, GL_FLOAT, GL_FALSE, 5<em>sizeof(float), (void</em>)(2*sizeof(float)));</p>
+</blockquote>
+<p>效果自行测试</p>
+<h4 id="Element-buffers"><a href="#Element-buffers" class="headerlink" title="Element buffers"></a>Element buffers</h4><p>顶点数组指定了顶点的顺序绘制。如果你想添加另外的形状,您必须添加额外的顶点到顶点数组中。有一种方法来控制顺序，可以重用顶点。这可以节省你很多的内存当使用真正的3D模型时,因为每个点通常被多个形状使用。</p>
+<p>element 数组是顶点数据bound在GL_ARRAY_BUFFER上的引用，使用方式如下：</p>
+<blockquote>
+<p>GLuint elements[] = {<br>    0, 1, 2<br>};</p>
+</blockquote>
+<p>和顶点数组一样，通过VBO加载到内存中</p>
+<blockquote>
+<p>GLuint ebo;<br>glGenBuffers(1, &amp;ebo);</p>
+</blockquote>
+<blockquote>
+<p>…</p>
+</blockquote>
+<blockquote>
+<p>glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);<br>glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(elements), elements, GL_STATIC_DRAW);</p>
+</blockquote>
+<p>唯一的不同在buffer的类型，使用<strong><em>GL_ELEMENT_ARRAY_BUFFER</em></strong><br>真正使用elemen之前，要调用以下方法：</p>
+<blockquote>
+<p>glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);</p>
+</blockquote>
+<p>和glDrawArrays第一个参数是一样的,但是引用指向element缓冲区。第二个参数指定的element引用的个数,第三个参数指定元素的数据类型,最后一个参数指定偏移量。唯一的区别是使用element引用和顶点坐标。</p>
+<p>下面来看一下使用element buffer的好处,让我们尝试使用两个三角形绘制一个矩形。我们首先不使用element buffer。</p>
+<blockquote>
+<p>float vertices[] = {<br>    -0.5f,  0.5f, 1.0f, 0.0f, 0.0f, // Top-left<br>     0.5f,  0.5f, 0.0f, 1.0f, 0.0f, // Top-right<br>     0.5f, -0.5f, 0.0f, 0.0f, 1.0f, // Bottom-right</p>
+</blockquote>
+<blockquote>
+<p>   0.5f, -0.5f, 0.0f, 0.0f, 1.0f, // Bottom-right<br>    -0.5f, -0.5f, 1.0f, 1.0f, 1.0f, // Bottom-left<br>    -0.5f,  0.5f, 1.0f, 0.0f, 0.0f  // Top-left<br>};</p>
+</blockquote>
+<p>调用如下方式使用</p>
+<blockquote>
+<p>glDrawArrays(GL_TRIANGLES, 0, 6);</p>
+</blockquote>
+<p>正确的情况下出现一个矩形,但顶点数据存在重复，浪费内存。使用element buffer,可以重用数据元素:</p>
+<blockquote>
+<p>float vertices[] = {<br>    -0.5f,  0.5f, 1.0f, 0.0f, 0.0f, // Top-left<br>     0.5f,  0.5f, 0.0f, 1.0f, 0.0f, // Top-right<br>     0.5f, -0.5f, 0.0f, 0.0f, 1.0f, // Bottom-right<br>    -0.5f, -0.5f, 1.0f, 1.0f, 1.0f  // Bottom-left<br>};</p>
+</blockquote>
+<blockquote>
+<p>…</p>
+</blockquote>
+<blockquote>
+<p>GLuint elements[] = {<br>    0, 1, 2,<br>    2, 3, 0<br>};</p>
+</blockquote>
+<blockquote>
+<p>…</p>
+</blockquote>
+<blockquote>
+<p>glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);</p>
+</blockquote>
+<p>element buffer指定6个顶点形成两个三角形,但现在我们可以重用顶点!当你的图形应用程序加载许多模型到相对较小的图形内存中,使用element缓冲区优化是很重要的。</p>
+<h3 id="Textures-objects-and-parameters"><a href="#Textures-objects-and-parameters" class="headerlink" title="Textures objects and parameters"></a>Textures objects and parameters</h3><p>就像VBOs和VAOs一样,Textures生成首先调用以下函数：</p>
+<blockquote>
+<p>GLuint tex;<br>glGenTextures(1, &amp;tex);</p>
+</blockquote>
+<p>texture通常用于3D模型图像,但在现实中他们可以用来存储许多不同种类的数据。可以有1D,2D和3D texture,可以用来存储大量数据在GPU上。texture的另一个用途是存储terrain（地形） information。本文将关注使用的纹理图像,但原则普遍适用于各种各样的纹理。</p>
+<p>和其他对象一样,texture必须绑定才能操作。由于图像是二维数组的像素,它将绑定到GL_TEXTURE_2D目标。</p>
+<blockquote>
+<p>glBindTexture(GL_TEXTURE_2D, tex);</p>
+</blockquote>
+<p>像素绘制是通过纹理坐标实现的，这些坐标的范围从0.0到1.0，(0,0)是屏幕左下角，可参照上文的坐标图，(1,1)是纹理图像的右上角。按照纹理坐标来检索像素颜色信息被称为采样（samping）。有解决这个问题的不同方法,每个适合不同的场景。OpenGL为你提供了许多选项来控制这个采样是如何实现的,下面将讨论其中的常见问题。</p>
+<h4 id="Wrapping"><a href="#Wrapping" class="headerlink" title="Wrapping"></a>Wrapping</h4><p>你首先要考虑的是如何采样坐标范围之外的纹理坐标（0到1之外）。OpenGL提供了四种处理方法:</p>
+<ul>
+<li><strong>GL_REPEAT</strong> : 整数部分（1.5中1被忽略）将被忽略，采用重复模式。</li>
+<li><strong>GL_MIRRORED_REPEAT</strong> : 采用重复模式,如果整数部分是奇数将会是镜像重复。</li>
+<li><strong>GL_CLAMP_TO_EDGE</strong> : 只采样0和1之间的坐标。</li>
+<li><strong>GL_CLAMP_TO_BORDER</strong> : 超出范围的坐标将指定特殊颜色的边框。</li>
+</ul>
+<p>这些解释可能仍然有点费解,下面来看看所有这些情况:</p>
+<p><img src="/images/gl_clamp.png" alt="处理方式"></p>
+<p>纹理坐标的(x,y,z)叫做(s,t,r)</p>
+<p>改变texture参数调用glTexParameter</p>
+<blockquote>
+<p>glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);<br>glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);</p>
+</blockquote>
+<p>如果你使用GL_CLAMP_TO_BORDER改变边框颜色,通过设置RGBA浮点数组</p>
+<blockquote>
+<p>float color[] = { 1.0f, 0.0f, 0.0f, 1.0f };<br>glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, color);</p>
+</blockquote>
+<h4 id="Filtering"><a href="#Filtering" class="headerlink" title="Filtering"></a>Filtering</h4><p>纹理坐标是和分辨率没有关联的,并不是匹配一个实际像素。纹理图像是会拉伸的相对于实际图像。OpenGL提供了各种方法来处理采样像素的颜色。这个过程称为过滤,可用以下方法:</p>
+<ul>
+<li><strong>GL_NEAREST</strong> : 返回最近像素的坐标。</li>
+<li><strong>GL_LINEAR</strong>: 返回围绕给定坐标的4个像素的加权平均值。</li>
+<li><strong>GL_NEAREST_MIPMAP_NEAREST</strong>、<strong>GL_LINEAR_MIPMAP_NEAREST</strong> <strong>GL_NEAREST_MIPMAP_LINEAR</strong> <strong>GL_LINEAR_MIPMAP_LINEAR</strong> : 采样通过mipmaps</li>
+</ul>
+<p>在讨论mipmaps之前,让我们首先看看GL_NEAREST和GL_LINEAR的差别。原始图像是16倍小于矩形光栅。</p>
+<p><img src="/images/gl_linear_nesrest.png" alt="filter"></p>
+<p>虽然GL_LINEAR提供了一个平滑的结果,但它并不总是最理想的选择。GL_NEAREST更适合游戏中的8bit位图,就是像素图。</p>
+<p>可以指定应该使用哪一种当放大或缩小图像时。这两种情况使用<strong>GL_TEXTURE_MIN_FILTER</strong> <strong>GL_TEXTURE_MAG_FILTER</strong>。</p>
+<blockquote>
+<p>glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);<br>glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);</p>
+</blockquote>
+<p>通过mipmaps过滤texture,mipmaps产生更小内存占用的texture。建议使用它们,因为质量更高和性能更好。</p>
+<blockquote>
+<p>glGenerateMipmap(GL_TEXTURE_2D);</p>
+</blockquote>
+<p>采样就是调用上面的函数，必须先加载纹理图像然后再mipmap。</p>
+<p>使用mipmap,有四种方法。</p>
+<ul>
+<li><strong>GL_NEAREST_MIPMAP_NEAREST</strong> : 使用最接近像素的大小的mipmap，采样使用近邻插值</li>
+<li><strong>GL_LINEAR_MIPMAP_NEAREST</strong> : 采样最近的mipmap使用线性插值</li>
+<li><strong>GL_NEAREST_MIPMAP_LINEAR</strong> : 使用两个最接近像素的大小的mipmap，采样使用近邻插值</li>
+<li><strong>GL_LINEAR_MIPMAP_LINEAR</strong> : 采样最近的两个mipmap使用线性插值</li>
+</ul>
+<p>有一些其他结构参数可用,但他们适合专业操作。你可以读到他们的<a href="http://docs.gl/gl3/glTexParameter" target="_blank" rel="noopener">规范</a>。</p>
+<h3 id="Loading-texture-images"><a href="#Loading-texture-images" class="headerlink" title="Loading texture images"></a>Loading texture images</h3><p>texture对象已经配置好可以加载texture图像了。只需加载一组像素进去:</p>
+<blockquote>
+<p>float pixels[] = {<br>    0.0f, 0.0f, 0.0f,   1.0f, 1.0f, 1.0f,<br>    1.0f, 1.0f, 1.0f,   0.0f, 0.0f, 0.0f<br>};<br>glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 2, 2, 0, GL_RGB, GL_FLOAT, pixels);</p>
+</blockquote>
+<p><strong>GL_TEXTURE_2D</strong> 后的第一个参数是代表图片等级,其中0是基础图像。这个参数可以用来加载自己的mipmap图像。第二个参数指定的内部像素格式,该格式的像素存储在GPU上。许多不同的格式是可用的,包括压缩格式。第三个和第四个参数指定图像的宽度和高度。第五个参数固定为0。接下来的两个参数描述最终加载的数组中的像素格式和最后一个参数指定了数组本身。函数开始加载图像坐标是(0,0)。</p>
+<p>但是是像素数组本身如何建立?texture的加载在图形应用程序通常会比从文件加载更复杂。最佳实践是使用硬件支持的文件格式,但它可能会更方便从常见的图像格式加载texture如JPG和PNG。不幸的是OpenGL不能提供任何辅助函数加载像素从这些图像文件,但这就是第三方库派上用场了!比如SOIL库。</p>
+<h5 id="SOIL"><a href="#SOIL" class="headerlink" title="SOIL"></a>SOIL</h5><p>简单使用如下：</p>
+<blockquote>
+<p>int width, height;<br>unsigned char* image =<br>    SOIL_load_image(“img.png”, &amp;width, &amp;height, 0, SOIL_LOAD_RGB);<br>glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB,<br>              GL_UNSIGNED_BYTE, image);</p>
+</blockquote>
+<p>使用完后释放:</p>
+<blockquote>
+<p>SOIL_free_image_data(image);</p>
+</blockquote>
+<h4 id="Using-a-texture"><a href="#Using-a-texture" class="headerlink" title="Using a texture"></a>Using a texture</h4><p>纹理采样使用纹理坐标,你需要将这些作为属性添加到顶点。让我们修改上一个例子的纹理坐标。现在新的顶点数组将包含s和t坐标:</p>
+<blockquote>
+<p>float vertices[] = {<br>//  Position      Color             Texure coords<br>    -0.5f,  0.5f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, // Top-left<br>     0.5f,  0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, // Top-right<br>     0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, // Bottom-right<br>    -0.5f, -0.5f, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f  // Bottom-left<br>};</p>
+</blockquote>
+<p>vertex shader 需要修改使 texture 坐标插值fragments shader:</p>
+<blockquote>
+<p>…</p>
+</blockquote>
+<blockquote>
+<p>in vec2 texcoord;</p>
+</blockquote>
+<blockquote>
+<p>out vec3 Color;<br>out vec2 Texcoord;</p>
+</blockquote>
+<blockquote>
+<p>…</p>
+</blockquote>
+<blockquote>
+<p>void main()<br>{<br>    Texcoord = texcoord;</p>
+</blockquote>
+<p>和颜色属性添加的时候一样, 属性引用需要适配新的格式:</p>
+<blockquote>
+<p>glVertexAttribPointer(posAttrib, 2, GL_FLOAT, GL_FALSE, 7<em>sizeof(float), 0);<br>glVertexAttribPointer(colAttrib, 3, GL_FLOAT, GL_FALSE, 7</em>sizeof(float), (void<em>)(2</em>sizeof(float)));</p>
+</blockquote>
+<blockquote>
+<p>GLint texAttrib = glGetAttribLocation(shaderProgram, “texcoord”);<br>glEnableVertexAttribArray(texAttrib);<br>glVertexAttribPointer(texAttrib, 2, GL_FLOAT, GL_FALSE, 7<em>sizeof(float), (void</em>)(5*sizeof(float)));</p>
+</blockquote>
+<p>添加了两个texture坐标，一个顶点包含7个值，texture 坐标是两个浮点值表示。</p>
+<p>还剩最后一步:提供fragment shader去采样像素。这是通过添加一个sampler2D的uniform,这将有一个默认值为0。只有访问多个纹理时才会变。</p>
+<p>此处使用SOIL加载图片，确保它路径正确。</p>
+<blockquote>
+<p>int width, height;<br>unsigned char* image = SOIL_load_image(“sample.png”, &amp;width, &amp;height, 0, SOIL_LOAD_RGB);<br>glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);<br>SOIL_free_image_data(image);</p>
+</blockquote>
+<p>用sampler从2D纹理采样像素,函数把采样器和纹理坐标作为参数。我们也会用采样颜色与颜色属性来获得一个有趣的效果。你的片段着色器将现在看起来像这样:</p>
+<blockquote>
+<p>in vec3 Color;<br>in vec2 Texcoord;</p>
+</blockquote>
+<blockquote>
+<p>out vec4 outColor;</p>
+</blockquote>
+<blockquote>
+<p>uniform sampler2D tex;</p>
+</blockquote>
+<blockquote>
+<p>void main()<br>{<br>    outColor = texture(tex, Texcoord) * vec4(Color, 1.0);<br>}</p>
+</blockquote>
+<h5 id="Texture-units"><a href="#Texture-units" class="headerlink" title="Texture units"></a>Texture units</h5><p>fragment shader的sampler绑定Texture units 0。Texture units是对texture对象的引用,可以在shader中被采样。texture绑定tuxture units使用glBindTexture函数。因为没有显式地指定要使用的纹理单元,所以绑定GL_TEXTURE0。这就是为什么的默认值为0。</p>
+<p>当调用glBindTexture时，glActiveTexture定义哪个texture unit被texture绑定。</p>
+<blockquote>
+<p>glActiveTexture(GL_TEXTURE0);</p>
+</blockquote>
+<p>texture unit 个数由GPU提供,至少48。可以肯定地说,你将永远不会达到这个极限在即使是最极端的图形应用程序。</p>
+<p>绑定多个纹理的情况,让我们尝试混合两张图片!我们先修改fragment shader去采样texture和混合像素:</p>
+<blockquote>
+<p>uniform sampler2D texKitten;<br>uniform sampler2D texPuppy;</p>
+</blockquote>
+<blockquote>
+<p>void main()<br>{<br>    vec4 colKitten = texture(texKitten, Texcoord);<br>    vec4 colPuppy = texture(texPuppy, Texcoord);<br>    outColor = mix(colKitten, colPuppy, 0.5);<br>}</p>
+</blockquote>
+<p>mix函数是一个特殊的GLSL函数线性插入两个变量之间基于第三个参数。值为0.0时将使用第一个值,值为1.0时将使用第二个值和两个值混合。</p>
+<p>现在两个采样器都准备好了,先分配两个texture unit绑定两个texture。这是通过调用的glActiveTexture在texure加载的代码。</p>
+<pre><code class="c">GLuint textures[2];
+glGenTextures(2, textures);
+
+int width, height;
+unsigned char* image;
+
+glActiveTexture(GL_TEXTURE0);
+glBindTexture(GL_TEXTURE_2D, textures[0]);
+image = SOIL_load_image(&quot;sample.png&quot;, &amp;width, &amp;height, 0, SOIL_LOAD_RGB);
+glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB,
+              GL_UNSIGNED_BYTE, image);
+SOIL_free_image_data(image);
+glUniform1i(glGetUniformLocation(shaderProgram, &quot;texKitten&quot;), 0);
+
+glActiveTexture(GL_TEXTURE1);
+glBindTexture(GL_TEXTURE_2D, textures[1]);
+image = SOIL_load_image(&quot;sample2.png&quot;, &amp;width, &amp;height, 0, SOIL_LOAD_RGB);
+glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB,
+              GL_UNSIGNED_BYTE, image);
+SOIL_free_image_data(image);
+glUniform1i(glGetUniformLocation(shaderProgram, &quot;texPuppy&quot;), 1);
+
+</code></pre>
+<p>纹理采样已经介绍完毕,还有transformations和3D，暂时不讨论。</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>//todo</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 来必力 -->
+<div id="livere-comment">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc1Mi8xMTI4OQ==">
+	<script type="text/ls-javascript" id="livere-comment-js">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+       if (typeof LivereTower === 'function') { return; }
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+</div>
+</div>
+<style>
+    #livere-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/post/Waiting-on-multiple-threads-to-complete-in-Java.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/post/Capture-Video-From-Camera-with-PreviewTexture.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Mybrc91's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        Mybrc91@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:Mybrc91@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Http/">Http<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Java/">Java<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Multimedia/">Multimedia<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programme/">Programme<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Tools/">Tools<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web/">Web<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/markdown/">markdown<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+     <!-- tags  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/tags/Android/">Android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/tags/Data/">Data<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/Java/">Java<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/tags/Linux/">Linux<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about.html" title="About Me">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About Me
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">24</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/Mybrc91" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>功到自然成
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed').css('overflow',"auto").css('max-height','70%');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+
+<script src=https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+    
+</html>

@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+        <link rel="dns-prefetch" href="https://cdn-city.livere.com"/>
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Android Performance | 
+        
+        功到自然成
+    </title>
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="Mybrc91的blog">
+    <meta name="keywords" content=",Android">
+    <meta name="theme-color" content="#0097A7">
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?ck5HQTrgAwBkXWwun1VdkA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="功到自然成">
+    <meta name="msapplication-starturl" content="gdzrch.win/post/Android-Performance.html">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="功到自然成">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="gdzrch.win/post/Android-Performance.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Android Performance | 功到自然成">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="Mybrc91的blog">
+    <meta property="og:article:tag" content="Android"> 
+
+    
+        <meta property="article:published_time" content="Sun Mar 26 2017 23:29:04 GMT+0800">
+        <meta property="article:modified_time" content="Fri Aug 17 2018 22:31:05 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="gdzrch.win/post/Android-Performance.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "gdzrch.win/post/Android-Performance.html",
+    "headline": "Android Performance",
+    "datePublished": "Sun Mar 26 2017 23:29:04 GMT+0800",
+    "dateModified": "Fri Aug 17 2018 22:31:05 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Mybrc91",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "我们可以卑微如尘土，但不可扭曲如蛆虫"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "功到自然成",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Android",
+    "description": "Mybrc91的blog",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Render"><span class="post-toc-number">1.</span> <span class="post-toc-text">Render</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Rendering-Pipeline"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Rendering Pipeline</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Android-UI-and-GPU"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Android UI and GPU</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GPU-Overdraw"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">GPU Overdraw</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#清楚重复背景"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">清楚重复背景</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#clipRect-and-quickReject"><span class="post-toc-number">1.2.1.2.</span> <span class="post-toc-text">clipRect and quickReject</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Layous-Invalidations-and-Perf"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Layous ,Invalidations and Perf</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Hierarchy-Viewer"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">Hierarchy Viewer</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Computer"><span class="post-toc-number">2.</span> <span class="post-toc-text">Computer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Traceview"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Traceview</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#batching-批处理-and-caching"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">batching(批处理) and caching</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Container-Performance-数据结构、容器类的性能"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Container Performance(数据结构、容器类的性能)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SysTrace"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">SysTrace</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Memory"><span class="post-toc-number">3.</span> <span class="post-toc-text">Memory</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GC"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">GC</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Memory-Leaks"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Memory Leaks</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Heap-Viewer"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Heap Viewer</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Tracking-Down-the-Leak-in-Code"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">Tracking Down the Leak in Code</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Allocation-Tracker"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">Allocation Tracker</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#reduce-memory-churn-降低内存占用"><span class="post-toc-number">3.5.1.</span> <span class="post-toc-text">reduce memory churn(降低内存占用)</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Battery"><span class="post-toc-number">4.</span> <span class="post-toc-text">Battery</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Battery-Historian"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Battery Historian</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Battery-Manager"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Battery Manager</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Wakelock-and-Battery-Drain-流失"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">Wakelock and Battery Drain(流失)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Network-and-Battery-Drain"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">Network and Battery Drain</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Job-Scheduler"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">Job Scheduler</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    <!-- $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png'); -->
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Android Performance
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Mybrc91</strong>
+        <span>3月 26, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Android/">Android</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android Performance&url=gdzrch.win/post/Android-Performance.html&pic=gdzrch.win/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android Performance&url=gdzrch.win/post/Android-Performance.html&via=Mybrc91" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=gdzrch.win/post/Android-Performance.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=gdzrch.win/post/Android-Performance.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>Android性能优化</p>
+<h1 id="Render"><a href="#Render" class="headerlink" title="Render"></a>Render</h1><p>Android中的界面渲染采用VSYNC（垂直同步）机制。因为手机屏幕大都采用60hz的刷新率，所以大约每16ms刷新一次界面，如下图所示<br><img src="/images/android-performance/android-view-vsync.jpg" alt="vsync"></p>
+<h2 id="Rendering-Pipeline"><a href="#Rendering-Pipeline" class="headerlink" title="Rendering Pipeline"></a>Rendering Pipeline</h2><p>界面渲染流程是一个从CPU处理数据，然后传送到GPU栅格化显示的过程。<br><img src="/images/android-performance/android-render-pipeline.jpg" alt="Rendering Pipeline"></p>
+<p> 所以在渲染界面过程中，产生的性能问题主要分两种：</p>
+<ol>
+<li>CPU处理阶段的Layouts问题</li>
+<li>GPU处理阶段的Overdraw问题<br>针对以上两个问题，分别对应的优化方法如下：</li>
+<li>使用Hierarchy Viewer工具查看布局层级，减少多余层级，尽量扁平化布局结构。</li>
+<li>使用手机开发者选项中的<code>Show GPU Overdraw</code>，查看界面过度绘制情况，采用以下两种方式优化：</li>
+</ol>
+<ul>
+<li>使用<code>Canvas.cliprect()</code>方法，指定裁剪区域，避免绘制不可见区域。</li>
+<li>移除View的多余背景，设置透明背景，减少过度绘制。</li>
+</ul>
+<p><img src="/images/android-performance/android-render-pipeline-detail.jpg" alt="Rendering Pipeline Detail"></p>
+<h2 id="Android-UI-and-GPU"><a href="#Android-UI-and-GPU" class="headerlink" title="Android UI and GPU"></a>Android UI and GPU</h2><p>GPU处理UI就是栅格化的过程。通过CPU处理，几何图形和textures（纹理）被加载到GPU中，然后栅格化显示到屏幕上。主要的耗时操作发生在CPU处理View和把数据传输到GPU两个过程中。</p>
+<p><img src="/images/android-performance/android-ui-flow.jpg" alt="UI flow"></p>
+<h3 id="GPU-Overdraw"><a href="#GPU-Overdraw" class="headerlink" title="GPU Overdraw"></a>GPU Overdraw</h3><h4 id="清楚重复背景"><a href="#清楚重复背景" class="headerlink" title="清楚重复背景"></a>清楚重复背景</h4><ol>
+<li>清除不必要的背景色，<code>getWindow().setBackgroundDrawable(null)</code>;</li>
+<li>头像背景的过度绘制优化<pre><code class="java">if (chat.getAuthor().getAvatarId() == 0) {
+  Picasso.with(getContext()).load(android.R.color.transparent).into(chat_author_avatar);
+  chat_author_avatar.setBackgroundColor(chat.getAuthor().getColor());
+} else {
+  Picasso.with(getContext()).load(chat.getAuthor().getAvatarId()).into(
+      chat_author_avatar);
+  chat_author_avatar.setBackgroundColor(Color.TRANSPARENT);
+}
+</code></pre>
+<h4 id="clipRect-and-quickReject"><a href="#clipRect-and-quickReject" class="headerlink" title="clipRect and quickReject"></a>clipRect and quickReject</h4>不绘制不可见区域，裁剪绘制的区域<br><img src="/images/android-performance/canvas-cliprect.jpg" alt="canvas clipRect"></li>
+</ol>
+<ul>
+<li>canvas.clipRect 设置裁剪区域<pre><code class="java">canvas.save()
+canvas.clipRect()
+//draw code
+canvas.restore()
+</code></pre>
+</li>
+<li>canvas.quickReject 判断是否在裁剪区域外</li>
+</ul>
+<h2 id="Layous-Invalidations-and-Perf"><a href="#Layous-Invalidations-and-Perf" class="headerlink" title="Layous ,Invalidations and Perf"></a>Layous ,Invalidations and Perf</h2><p><img src="/images/android-performance/android-display-flow.jpg" alt="Layous"></p>
+<h3 id="Hierarchy-Viewer"><a href="#Hierarchy-Viewer" class="headerlink" title="Hierarchy Viewer"></a>Hierarchy Viewer</h3><p>使用此工具查看布局层级和measure、layout、draw性能分析。通过减少嵌套布局，尽量扁平化布局，来进行性能优化。</p>
+<h1 id="Computer"><a href="#Computer" class="headerlink" title="Computer"></a>Computer</h1><p>程序执行会耗费cpu时间，一些方法执行时间很长，会带来性能问题，造成丢帧问题甚至ANR（5秒不响应），使用户感到卡顿。<br><img src="/images/android-performance/android-draw-wait.jpg" alt="Computer"></p>
+<h2 id="Traceview"><a href="#Traceview" class="headerlink" title="Traceview"></a>Traceview</h2><p>Traceview记录了方法执行时间并显示执行数据,线程的时间和调用堆栈等信息，由此来跟踪代码中的性能问题。<br><a href="http://developer.android.com/tools/performance/traceview/index.html" target="_blank" rel="noopener">traceview</a><br>有两种方法生产trace文件：</p>
+<ol>
+<li>通过DDMS工具的Method Profiling(性能分析)。</li>
+<li>在代码中使用<code>Debug</code>类的方法：<pre><code class="java">// start tracing to &quot;/sdcard/calc.txt&quot;
+Debug.startMethodTracing(&#39;calc&#39;);
+// code
+Debug.stopMethodTracing();
+</code></pre>
+参考资料<br><a href="http://developer.android.com/tools/debugging/debugging-tracing.html" target="_blank" rel="noopener">debugging-tracing</a><br><a href="https://docs.google.com/a/knowlabs.com/document/d/1EKVq2FzcLVJFbwUtaC3QRddSwtzs0BSKZahkQyeGyHo/pub?embedded=true#h.xbsfzbxi5i1e" target="_blank" rel="noopener">debugging-tracing1</a></li>
+</ol>
+<h2 id="batching-批处理-and-caching"><a href="#batching-批处理-and-caching" class="headerlink" title="batching(批处理) and caching"></a>batching(批处理) and caching</h2><p>通过批处理和缓存计算结果来达到优化计算性能的目的</p>
+<h2 id="Container-Performance-数据结构、容器类的性能"><a href="#Container-Performance-数据结构、容器类的性能" class="headerlink" title="Container Performance(数据结构、容器类的性能)"></a>Container Performance(数据结构、容器类的性能)</h2><p>通过使用合适的数据结构和容器类来提供程序执行效率</p>
+<ul>
+<li>有序序列在大量数据时使用二分查找，快速排序等</li>
+<li>无序序列使用hashtable</li>
+</ul>
+<h2 id="SysTrace"><a href="#SysTrace" class="headerlink" title="SysTrace"></a>SysTrace</h2><p>Systrace工具帮助分析应用程序的性能通过捕获和显示应用程序的执行时间流程和其他Android系统过程。此工具从Android内核收集统计CPU调度、磁盘活动,和应用程序线程等信息生成一个HTML报告，显示Android系统一段时间内的整体状态。用于诊断应用程序速度慢的问题，卡顿，动画不流畅等问题。<br>有两种方式生成systrace信息：</p>
+<ol>
+<li>通过monitor中的ddms的systrace工具。</li>
+<li>代码中使用<code>Trace</code>类生产。</li>
+</ol>
+<pre><code class="java">Trace.beginSection();
+//code
+Trace.endSection();
+</code></pre>
+<p>参考<br><a href="https://developer.android.com/studio/profile/systrace.html" target="_blank" rel="noopener">systrace</a></p>
+<h1 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h1><p>内存优化是最复杂，也是最重要的优化手段。通过Android提供的一系列工具，很方便的进行内存优化：</p>
+<ol>
+<li>Memry Monitor : 实时查看内存状态</li>
+<li>Heap Viewer : 查看内存堆中存放的对象信息</li>
+<li>Allocation Tracker : 跟踪内存对象的分配信息，对象的创建<br><img src="/images/android-performance/android-code-executing.jpg" alt="Memory"></li>
+</ol>
+<h2 id="GC"><a href="#GC" class="headerlink" title="GC"></a>GC</h2><p>GC即Garbage Collection。垃圾回收机制处理两个问题：</p>
+<ol>
+<li>找到没有被引用的对象</li>
+<li>回收那些对象占用的内存资源<br><img src="/images/android-performance/android-jvm.jpg" alt="android jvm"></li>
+</ol>
+<p>Android中分配的对象首先进入到<code>Young Generation</code>，如果其中的内存空间不够，就会触发GC操作，如下图：<br><img src="/images/android-performance/android-gc.jpg" alt="GC"><br>而如果GC操作很耗时的话，就会导致下图所示情况，造成丢帧，给用户卡顿的感觉：<br><img src="/images/android-performance/android-gc-block.jpg" alt="GC block"></p>
+<h2 id="Memory-Leaks"><a href="#Memory-Leaks" class="headerlink" title="Memory Leaks"></a>Memory Leaks</h2><p>内存泄漏就是无用的对象还保持着对象的引用，导致GC机制无法回收，最终造成内存溢出等问题。减少内存泄漏是优化内存的主要方式。<br><img src="/images/android-performance/android-memory-leak.jpg" alt="Memory Leaks"></p>
+<h2 id="Heap-Viewer"><a href="#Heap-Viewer" class="headerlink" title="Heap Viewer"></a>Heap Viewer</h2><p>通过Heap Viewer工具可以查看应用程序对象分配,包括数量,在堆内存中的大小等信息。<br><a href="https://developer.android.com/studio/profile/heap-viewer-walkthru.html" target="_blank" rel="noopener">Heap Vierer</a></p>
+<h2 id="Tracking-Down-the-Leak-in-Code"><a href="#Tracking-Down-the-Leak-in-Code" class="headerlink" title="Tracking Down the Leak in Code"></a>Tracking Down the Leak in Code</h2><p>下面一个例子，可以看到内存泄漏的情况：</p>
+<pre><code class="java">private void init() {
+ListenerCollector collector = new ListenerCollector();
+collector.setListener(this, mListener);
+}
+</code></pre>
+<p>发生泄漏的语句是<code>collector.setListener(this, mListener);</code></p>
+<p>在这个例子中,当由于设备方向改变创建一个新的activity时，还会调用此方法，但是<code>onDestory</code>上一个activity时，listener保持着它的引用，导致无法销毁。所以应该在<code>onStop</code>方法中即时销毁无用的对象，释放activity的引用。</p>
+<h2 id="Allocation-Tracker"><a href="#Allocation-Tracker" class="headerlink" title="Allocation Tracker"></a>Allocation Tracker</h2><p>Allocation Tracker 工具记录应用程序的内存分配和所有分配对象的调用堆栈,大小和在代码中的位置。<br>使用此工具有两个重要作用：</p>
+<ol>
+<li>从调用堆栈中找到并且不断分配和回收的对象的位置。</li>
+<li>找到代码中可能导致内存使用效率低的地方。<br><a href="https://developer.android.com/studio/profile/allocation-tracker-walkthru.html" target="_blank" rel="noopener">Allocation Tracker</a><h3 id="reduce-memory-churn-降低内存占用"><a href="#reduce-memory-churn-降低内存占用" class="headerlink" title="reduce memory churn(降低内存占用)"></a>reduce memory churn(降低内存占用)</h3>比如：使用StringBuilder代替字符串累加</li>
+</ol>
+<h1 id="Battery"><a href="#Battery" class="headerlink" title="Battery"></a>Battery</h1><p>电量主要消耗在以下一些地方：</p>
+<ul>
+<li>Application Processor</li>
+<li>Cellular Radio（移动网络）</li>
+<li>Screen</li>
+</ul>
+<p>所以电量优化从以下几方面进行：</p>
+<ul>
+<li>lazy first</li>
+<li>Job Scheduler API</li>
+<li>Battery Historian</li>
+</ul>
+<h2 id="Battery-Historian"><a href="#Battery-Historian" class="headerlink" title="Battery Historian"></a>Battery Historian</h2><p>Battery Historian的使用方法如下：</p>
+<pre><code> adb shell dumpsys batterystats --reset
+ adb shell dumpsys batterystats &gt; package name &gt; historian.txt
+python historian.py historian.txt &gt; historian.html
+</code></pre><p><a href="https://github.com/google/battery-historian" target="_blank" rel="noopener">battery-historian</a><br><a href="http://developer.android.com/tools/performance/batterystats-battery-historian/index.html" target="_blank" rel="noopener">batterystats</a></p>
+<h2 id="Battery-Manager"><a href="#Battery-Manager" class="headerlink" title="Battery Manager"></a>Battery Manager</h2><p>使用BatteryManager控制电池的使用逻辑</p>
+<pre><code class="java">// It is very easy to subscribe to changes to the battery state, but you can get the current
+// state by simply passing null in as your receiver. Nifty, isn&#39;t that?
+IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+Intent batteryStatus = this.registerReceiver(null, filter);
+int chargePlug = batteryStatus.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
+boolean acCharge = (chargePlug == BatteryManager.BATTERY_PLUGGED_AC);
+if (acCharge) {
+    Log.v(LOG_TAG,“The phone is charging!”);
+}
+</code></pre>
+<p>在这个例子中,我们首先建立一个检测电池状态的意图过滤器。然后我们注册这个过滤器，获取当前电池状态。在这种情况下,我们检查是否处于充电状态，存储在一个布尔值中,然后我们可以使用它做程序逻辑。</p>
+<h2 id="Wakelock-and-Battery-Drain-流失"><a href="#Wakelock-and-Battery-Drain-流失" class="headerlink" title="Wakelock and Battery Drain(流失)"></a>Wakelock and Battery Drain(流失)</h2><p>频繁的Wakelock会导致电量流失，优化wakelock的使用。</p>
+<h2 id="Network-and-Battery-Drain"><a href="#Network-and-Battery-Drain" class="headerlink" title="Network and Battery Drain"></a>Network and Battery Drain</h2><p>下图是发生移动网络请求时的电量使用信息，相比之下使用移动网络更加耗电。<br><img src="/images/android-performance/android-battery-drain.jpg" alt="Battery Drain"></p>
+<p>打包可以延迟的网络请求，有wifi时发送</p>
+<h2 id="Job-Scheduler"><a href="#Job-Scheduler" class="headerlink" title="Job Scheduler"></a>Job Scheduler</h2><p>把不是即时的任务交给Job Scheduler执行</p>
+<p><img src="/images/android-performance/android-job-scheduler.jpg" alt="Job Scheduler"></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 来必力 -->
+<div id="livere-comment">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc1Mi8xMTI4OQ==">
+	<script type="text/ls-javascript" id="livere-comment-js">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+       if (typeof LivereTower === 'function') { return; }
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+</div>
+</div>
+<style>
+    #livere-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/post/Big-and-Little-Endian.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/post/Sublime-Build-System-Console-Cannot-Print-Chinese.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Mybrc91's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        Mybrc91@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:Mybrc91@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Http/">Http<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Java/">Java<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Multimedia/">Multimedia<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Programme/">Programme<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Tools/">Tools<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web/">Web<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/markdown/">markdown<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+     <!-- tags  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/tags/Android/">Android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/tags/Data/">Data<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/tags/Java/">Java<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/tags/Linux/">Linux<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about.html" title="About Me">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About Me
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">24</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/Mybrc91" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>功到自然成
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed').css('overflow',"auto").css('max-height','70%');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+
+<script src=https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+    
+</html>
